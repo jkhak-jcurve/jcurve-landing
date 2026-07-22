@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>팀 소개 — 팀제이커브</title>
+<meta name="description" content="공군·육군 장교 출신의 아빠들이 모여 시작한 AI Native 조직, 팀 제이커브를 소개합니다. 크루제도부터 리더진·Business·Creative LAB·Productive LAB까지.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#fff;font-family:'Pretendard','Montserrat',system-ui,-apple-system,sans-serif;color:#0a1317;letter-spacing:-0.2px;}
+  a{text-decoration:none;color:inherit;}
+  a:hover{color:#0064e0;}
+  img{display:block;max-width:100%;}
+  h1,h2,h3,p{margin-top:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  main{padding-top:82px;}
+  .jc-sec{padding-left:max(32px,calc((100% - 1232px)/2))!important;padding-right:max(32px,calc((100% - 1232px)/2))!important;}
+  .jc-wrap{max-width:1232px;margin:0 auto;}
+  .jc-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:6px;white-space:nowrap;}
+  .jc-eyebrow{font-family:'Montserrat';font-size:13px;font-weight:800;letter-spacing:0.14em;color:#2450f5;text-transform:uppercase;margin-bottom:12px;}
+  .jc-h2{font-family:'Montserrat';margin:0 0 16px;font-size:38px;font-weight:800;letter-spacing:-0.4px;color:#0a1317;word-break:keep-all;line-height:1.15;}
+  .jc-lead-p{margin:0;max-width:760px;font-size:18px;line-height:1.75;color:#5d6c7b;word-break:keep-all;}
+  .jc-shead{margin-bottom:44px;}
+  .jc-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .jc-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .jc-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+
+  .jc-crew{background:#fff;border:1px solid #e6ebef;border-radius:22px;padding:38px 30px 34px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .18s,box-shadow .18s;}
+  .jc-crew:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,.1);}
+  .jc-crew-ic{width:112px;height:112px;margin-bottom:20px;}
+  .jc-crew-ic img{width:100%;height:100%;object-fit:contain;}
+  .jc-crew-tag{font-family:'Montserrat';font-size:13px;font-weight:800;letter-spacing:0.12em;color:#2450f5;}
+  .jc-crew-title{font-size:21px;font-weight:700;margin:6px 0 12px;letter-spacing:-0.4px;}
+  .jc-crew-desc{margin:0;font-size:15.5px;line-height:1.7;color:#5d6c7b;word-break:keep-all;}
+
+  .jc-lead{display:flex;gap:30px;align-items:center;background:#fff;border:1px solid #e6ebef;border-radius:24px;padding:30px;transition:transform .18s,box-shadow .18s;}
+  .jc-lead:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(10,19,23,.1);}
+  .jc-lead-ph{flex:0 0 168px;width:168px;height:168px;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#eef3ff,#dbe6ff);}
+  .jc-lead-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-lead-body{display:grid;gap:9px;}
+  .jc-lead-role{font-family:'Montserrat';font-size:13px;font-weight:700;letter-spacing:0.06em;color:#2450f5;}
+  .jc-lead-name{font-size:28px;font-weight:800;letter-spacing:-0.6px;}
+
+  .jc-mem{display:flex;flex-direction:column;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+  .jc-mem:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,.1);}
+  .jc-mem-ph{aspect-ratio:1/1;background:linear-gradient(160deg,#eef3ff,#e2ebff);}
+  .jc-mem-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-mem-body{padding:22px 24px 26px;display:grid;gap:9px;}
+  .jc-mem-role{font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.05em;color:#2450f5;}
+  .jc-mem-name{font-size:21px;font-weight:800;letter-spacing:-0.5px;}
+  .jc-mem-cred{display:grid;gap:6px;margin-top:4px;}
+  .jc-mem-cred li{position:relative;padding-left:14px;font-size:14px;line-height:1.55;color:#5d6c7b;word-break:keep-all;}
+  .jc-mem-cred li::before{content:"";position:absolute;left:2px;top:9px;width:4px;height:4px;border-radius:50%;background:#c3ccd6;}
+
+  .jc-nat{background:#0b1020;border:1px solid #1b2540;border-radius:22px;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+  .jc-nat:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,16,32,.4);}
+  .jc-nat-ph{position:relative;aspect-ratio:1/1;background:#111;}
+  .jc-nat-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-nat-badge{position:absolute;top:12px;left:12px;font-family:'Montserrat';font-size:11px;font-weight:800;letter-spacing:0.1em;color:#fff;background:rgba(36,80,245,0.9);padding:5px 10px;border-radius:100px;}
+  .jc-nat-body{padding:18px 18px 22px;}
+  .jc-nat-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.4px;}
+  .jc-nat-role{margin-top:5px;font-size:13.5px;color:#9fb0d0;line-height:1.5;word-break:keep-all;}
+
+  @media(max-width:1024px){
+    .jc-nav{display:none!important;}
+    .jc-grid-3,.jc-grid-2{grid-template-columns:1fr!important;}
+    .jc-grid-5{grid-template-columns:repeat(2,1fr)!important;}
+    .jc-hero-h1{font-size:38px!important;}
+    .jc-lead{flex-direction:column;align-items:flex-start;text-align:left;}
+    .jc-lead-ph{width:130px;height:130px;flex-basis:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="jc-sec" style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;height:82px;padding:0 44px;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #eef1f5;">
+  <a href="./" style="display:inline-flex;align-items:center;"><img src="assets/logo-black.png" alt="팀제이커브" style="width:150px;"></a>
+  <nav class="jc-nav">
+    <a href="leadership.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 리더십 교육</a>
+    <a href="job-skill.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 직무역량 교육</a>
+    <a href="org-dev.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 조직 개발</a>
+    <a href="cases.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">고객사례</a>
+    <a href="team.html" style="padding:9px 16px;border-radius:100px;color:#0064e0;font-size:17px;font-weight:700;background:#eef3ff;">팀 소개</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <a href="#contact" style="display:inline-flex;align-items:center;min-height:44px;padding:11px 24px;border-radius:100px;color:#fff;font-size:16px;font-weight:700;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);box-shadow:0 8px 20px rgba(36,80,245,0.35),inset 0 1px 0 rgba(255,255,255,0.38);">문의하기</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="jc-sec" style="padding:92px 64px 76px;background:radial-gradient(circle at 85% 8%,rgba(111,155,255,0.22),transparent 46%),linear-gradient(180deg,#f6f9ff 0%,#ffffff 100%);">
+    <div class="jc-wrap">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:34px;font-size:14px;font-weight:600;color:#8595a4;">
+        <a href="./" style="color:#8595a4;">홈</a><span>›</span><span style="color:#0a1317;">팀 소개</span>
+      </div>
+      <h1 class="jc-hero-h1" style="font-family:'Montserrat';margin:0 0 22px;font-size:58px;font-weight:800;line-height:1.1;letter-spacing:-0.8px;color:#0a1317;word-break:keep-all;">About Team J-curve</h1>
+      <p style="margin:0;max-width:680px;font-size:19px;line-height:1.75;color:#5d6c7b;word-break:keep-all;">AI 시대, 진정한 가치는 <strong style="color:#2450f5;font-weight:700;">사람</strong>에게 있습니다. 공군·육군 장교 출신의 건강한 아빠들이 모여 시작한 팀, 사람의 성장을 돕는 것을 가장 중요하게 생각하는 AI Native 조직 팀 제이커브입니다.</p>
+    </div>
+  </section>
+
+  <section class="jc-sec" style="padding:80px 64px;background:#fff;">
+    <div class="jc-wrap">
+      <div class="jc-shead">
+      <h2 class="jc-h2" style="color:#0a1317;">Crew System</h2>
+      <p class="jc-lead-p" style="color:#5d6c7b;">AI 시대의 일은 더 이상 한 형태로 고정되지 않습니다. 팀 제이커브는 AI Native 조직으로서 CORE·HUB·FREE 3가지 크루 체계를 통해 각자의 리듬에 맞게 일하고, 배우고, 성장하는 문화를 실험합니다.</p>
+    </div>
+      <div class="jc-grid-3"><article class="jc-crew">
+      <div class="jc-crew-ic"><img src="assets/team/crew_core.jpg" alt="CORE Crew"></div>
+      <div class="jc-crew-tag">CORE</div>
+      <div class="jc-crew-title">CORE Crew</div>
+      <p class="jc-crew-desc">팀 제이커브 중심에서 팀 성장을 이끌며, AI Native로서 방향과 문화를 설계합니다.</p>
+    </article><article class="jc-crew">
+      <div class="jc-crew-ic"><img src="assets/team/crew_hub.jpg" alt="HUB Crew"></div>
+      <div class="jc-crew-tag">HUB</div>
+      <div class="jc-crew-title">HUB Crew</div>
+      <p class="jc-crew-desc">코어 크루와 협업하며 프로젝트를 만들고, AI와 사람을 연결해 새로운 가치를 만듭니다.</p>
+    </article><article class="jc-crew">
+      <div class="jc-crew-ic"><img src="assets/team/crew_free.jpg" alt="FREE Crew"></div>
+      <div class="jc-crew-tag">FREE</div>
+      <div class="jc-crew-title">FREE Crew</div>
+      <p class="jc-crew-desc">시간과 장소를 넘어 자유롭게 참여하며, AI 시대의 새로운 가능성을 실험합니다.</p>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="jc-sec" style="padding:80px 64px;background:#f6f9ff;">
+    <div class="jc-wrap">
+      <div class="jc-shead">
+      <h2 class="jc-h2" style="color:#0a1317;">Leadership</h2>
+      <p class="jc-lead-p" style="color:#5d6c7b;">방향과 문화를 설계하는 코어 리더들이 팀의 성장을 이끕니다.</p>
+    </div>
+      <div class="jc-grid-2"><article class="jc-lead">
+      <div class="jc-lead-ph"><img src="assets/team/mangu.jpg" alt="망구" loading="lazy"></div>
+      <div class="jc-lead-body">
+        <div class="jc-lead-role">팀 제이커브 CEO</div>
+        <div class="jc-lead-name">망구</div>
+        <ul class="jc-mem-cred"><li>하드웨어 액셀러레이터 N15 이사</li><li>포항공과대학교 창업 멘토</li><li>『이것이 챗GPT다』 저자</li><li>육군 장교 전역</li></ul>
+      </div>
+    </article><article class="jc-lead">
+      <div class="jc-lead-ph"><img src="assets/team/lakki.jpg" alt="랏끼" loading="lazy"></div>
+      <div class="jc-lead-body">
+        <div class="jc-lead-role">팀 제이커브 COO</div>
+        <div class="jc-lead-name">랏끼</div>
+        <ul class="jc-mem-cred"><li>비즈니스PT 책임센터장</li><li>일본 B2B IT SaaS 기업 세일즈 전략</li><li>고려대학교 경영학</li><li>공군 장교 전역</li></ul>
+      </div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="jc-sec" style="padding:80px 64px;background:#fff;">
+    <div class="jc-wrap">
+      <div class="jc-shead">
+      <h2 class="jc-h2" style="color:#0a1317;">Team Business</h2>
+      <p class="jc-lead-p" style="color:#5d6c7b;">팀 비즈니스는 AI가 바꾸는 흐름 속에서 새로운 가치를 창출하며, 한국·일본·중국·북미의 크루들과 함께 글로벌 AI 비즈니스를 확장합니다.</p>
+    </div>
+      <div class="jc-grid-3"><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/reyrey.jpg" alt="레이레이" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Team Business Crew · Advisor</div>
+        <div class="jc-mem-name">레이레이</div>
+        <ul class="jc-mem-cred"><li>㈜레이오파트너즈 대표이사</li><li>Striders · JMDC Inc. 사외이사</li><li>글로비스 경영대학원 겸임교수</li><li>게이오 비즈니스 스쿨 MBA · 연세대 의류학</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/john.jpg" alt="죤" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Team Business Crew · Advisor</div>
+        <div class="jc-mem-name">죤</div>
+        <ul class="jc-mem-cred"><li>일본 IT 스타트업 ‘오비스’ 대표 (650억 투자 유치)</li><li>AI Empower 일본 교육 브랜드 세일즈 총괄</li><li>제이커브스쿨 일본 브랜드 총괄</li><li>AI PASS 기획·개발 총괄</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/keju.jpg" alt="케주" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Team Business Crew</div>
+        <div class="jc-mem-name">케주</div>
+        <ul class="jc-mem-cred"><li>Studio YNP 대표</li><li>前 BTS Associate Director</li><li>AI 리더십·조직개발 컨설턴트</li><li>서울대학교 소비자학 학사</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/jeongribot.jpg" alt="정리봇" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">AI Short-form Expert</div>
+        <div class="jc-mem-name">정리봇</div>
+        <ul class="jc-mem-cred"><li>AI 커뮤니티 ‘지피터스’ 운영진</li><li>AI 영상편집툴 ‘비디오스튜’ 공식 파트너</li><li>공군 대위 전역</li><li>美 UC Irvine 학사</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/loop.jpg" alt="루프" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Team Business Crew</div>
+        <div class="jc-mem-name">루프</div>
+        <ul class="jc-mem-cred"><li>AR·VR·AI 융합 교육 콘텐츠 개발</li><li>㈜엔닷라이트 교육팀장</li><li>AI 기반 블로그 프로세스 기획</li><li>3D·메이커 콘텐츠 기획 다수</li></ul>
+      </div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="jc-sec" style="padding:80px 64px;background:#f6f9ff;">
+    <div class="jc-wrap">
+      <div class="jc-shead">
+      <h2 class="jc-h2" style="color:#0a1317;">Creative LAB</h2>
+      <p class="jc-lead-p" style="color:#5d6c7b;">크리에이티브 랩은 AI와 인간의 상상력을 결합해 새로운 콘텐츠의 가능성을 실험하며, 상상을 현실로 만드는 생태계를 만들어 갑니다.</p>
+    </div>
+      <div class="jc-grid-3"><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/seul.jpg" alt="슬" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Creative Lab Crew</div>
+        <div class="jc-mem-name">슬</div>
+        <ul class="jc-mem-cred"><li>AI Design Awards 전시 – Special Recognition (바르셀로나)</li><li>Art Beacon Gallery 전시 (도쿄)</li><li>AI 웹드라마 ‘2035’ 기획</li><li>AI 숏폼 공모전 PM</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/noway.jpg" alt="노웨이" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Creative Lab Crew</div>
+        <div class="jc-mem-name">노웨이</div>
+        <ul class="jc-mem-cred"><li>2021 대한민국 광고대상 수상</li><li>SKT·LG·삼성·코오롱·이마트 등 다수 광고 제작</li><li>TVCF 제작 감독·프로듀서 (300편 이상)</li><li>AI CF Director — LG 그램, ‘디웨더’ 등</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/ericchoi.jpg" alt="에릭최" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Creative Lab Crew</div>
+        <div class="jc-mem-name">에릭최</div>
+        <ul class="jc-mem-cred"><li>Tedx AI Concept Artist 패널</li><li>영국 런던 Boomer Gallery 전시</li><li>스페인 바르셀로나 The Holy Gallery 전시</li><li>캐나다 토론토 Rosedale Art Fair 참가</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/dongtech.jpg" alt="동테크" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Creative Lab Crew</div>
+        <div class="jc-mem-name">동테크</div>
+        <ul class="jc-mem-cred"><li>AI 유튜브 ‘동테크’ 채널 운영 (3만명)</li><li>메이커스페이스 교육 및 운영 총괄</li><li>브랜디드 AI 이미지 제작 및 갤러리 전시</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/uni.jpg" alt="유니" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Creative Lab Crew</div>
+        <div class="jc-mem-name">유니</div>
+        <ul class="jc-mem-cred"><li>하우앤와이 콘텐츠 기획 및 편집자</li><li>메가스터디 영상 촬영 및 편집</li><li>AI 콘텐츠 ‘해야만하는 쉐어하우스’ 제작</li><li>팀 제이커브 브랜디드 유튜브 콘텐츠 제작</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/heunyeol.jpg" alt="흔열" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Creative Lab Crew</div>
+        <div class="jc-mem-name">흔열</div>
+        <ul class="jc-mem-cred"><li>MWM 숏드라마 디렉터 (중국)</li><li>동국대학교 영상영화과 박사</li><li>AI 영화 ‘스마일’ 감독</li><li>AI 시나리오·제작 · 중국 비즈니스 트립 기획</li></ul>
+      </div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="jc-sec" style="padding:80px 64px;background:#fff;">
+    <div class="jc-wrap">
+      <div class="jc-shead">
+      <h2 class="jc-h2" style="color:#0a1317;">Productive LAB</h2>
+      <p class="jc-lead-p" style="color:#5d6c7b;">프로덕티브 랩은 AI로 반복되는 일을 줄여 사람이 본질에 집중하고 더 사람답게 일할 수 있도록 돕습니다. 생산성을 높여 인간의 가능성을 확장합니다.</p>
+    </div>
+      <div class="jc-grid-2" style="max-width:816px;"><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/rec.jpg" alt="레크" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Productive Lab Crew</div>
+        <div class="jc-mem-name">레크</div>
+        <ul class="jc-mem-cred"><li>LLM & Nocode Expert</li><li>D2C 이커머스 플랫폼 창업</li><li>AI·Tech Blog 자동화</li><li>AI Marketing Service Builder</li></ul>
+      </div>
+    </article><article class="jc-mem">
+      <div class="jc-mem-ph"><img src="assets/team/chancelab.jpg" alt="찬스랩" loading="lazy"></div>
+      <div class="jc-mem-body">
+        <div class="jc-mem-role">Productive Lab Crew</div>
+        <div class="jc-mem-name">찬스랩</div>
+        <ul class="jc-mem-cred"><li>글로벌 핀테크사 백엔드 개발자</li><li>前 토스 백엔드 개발자</li><li>고려대학교 경제학사</li><li>바이브코딩 활용 플러터 앱 개발</li></ul>
+      </div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="jc-sec" style="padding:88px 64px;background:linear-gradient(180deg,#0a1020 0%,#0d1428 100%);">
+    <div class="jc-wrap">
+      <div class="jc-shead">
+      <h2 class="jc-h2" style="color:#fff;">2035 AI Native Crews</h2>
+      <p class="jc-lead-p" style="color:#9fb0d0;">AI가 일상이 된 2035년의 노하우를 가진 5인의 AI Native가 팀 제이커브와 함께 개인과 조직의 삶을 바꾸고 있습니다.</p>
+    </div>
+      <div class="jc-grid-5"><article class="jc-nat">
+      <div class="jc-nat-ph"><img src="assets/team/kimjay.jpg" alt="김제이" loading="lazy"><span class="jc-nat-badge">2035</span></div>
+      <div class="jc-nat-body"><div class="jc-nat-name">김제이</div><div class="jc-nat-role">AI Native 프로덕트 매니저</div></div>
+    </article><article class="jc-nat">
+      <div class="jc-nat-ph"><img src="assets/team/leeyuna.jpg" alt="이유나" loading="lazy"><span class="jc-nat-badge">2035</span></div>
+      <div class="jc-nat-body"><div class="jc-nat-name">이유나</div><div class="jc-nat-role">브랜드 콘텐츠 AI 마케터</div></div>
+    </article><article class="jc-nat">
+      <div class="jc-nat-ph"><img src="assets/team/parkyonghun.jpg" alt="박용훈" loading="lazy"><span class="jc-nat-badge">2035</span></div>
+      <div class="jc-nat-body"><div class="jc-nat-name">박용훈</div><div class="jc-nat-role">AI 엔지니어 바이브코더</div></div>
+    </article><article class="jc-nat">
+      <div class="jc-nat-ph"><img src="assets/team/kimhuiyul.jpg" alt="김희율" loading="lazy"><span class="jc-nat-badge">2035</span></div>
+      <div class="jc-nat-body"><div class="jc-nat-name">김희율</div><div class="jc-nat-role">풀스택 AI 디자이너</div></div>
+    </article><article class="jc-nat">
+      <div class="jc-nat-ph"><img src="assets/team/kimsangjun.jpg" alt="김상준" loading="lazy"><span class="jc-nat-badge">2035</span></div>
+      <div class="jc-nat-body"><div class="jc-nat-name">김상준</div><div class="jc-nat-role">AI 조직문화 아키텍트</div></div>
+    </article></div>
+    </div>
+  </section>
+
+  <section id="contact" class="jc-sec" style="position:relative;overflow:hidden;padding:110px 64px;text-align:center;color:#fff;background:linear-gradient(160deg,#2450f5 0%,#0f24cf 60%,#0a1a8c 100%);">
+    <div style="position:relative;max-width:760px;margin:0 auto;display:grid;justify-items:center;">
+      <h2 style="margin:0 0 18px;font-size:44px;font-weight:600;line-height:1.2;letter-spacing:-1px;color:#fff;word-break:keep-all;">우리 조직의 AI 전환, 함께 시작할까요?</h2>
+      <p style="margin:0 0 34px;font-size:21px;line-height:1.55;color:rgba(255,255,255,0.86);word-break:keep-all;">조직 규모·교육 대상·현재 고민을 알려주시면,<br>가장 적합한 교육과 AX 방향을 무료로 제안드립니다.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+        <a href="https://www.pluuug.com/form/U5pXxK3Z22" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:16px 40px;border-radius:100px;color:#0f24cf;font-size:19px;font-weight:700;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,0.2);">문의하기 →</a>
+        <a href="https://sclu.io/share/bulk/file/bfAsckbDcHwT" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:14px 36px;border-radius:100px;color:#fff;font-size:19px;font-weight:700;background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.4);">소개서 보기</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="jc-sec" style="padding:56px 64px;text-align:center;background:#05070c;color:rgba(255,255,255,0.6);display:grid;gap:14px;justify-items:center;">
+  <img src="assets/logo-white.png" alt="팀제이커브" style="width:130px;">
+  <p style="margin:0;font-size:15px;line-height:1.6;">주식회사 팀제이커브 · 서울특별시 마포구 양화로 186 · info@teamjcurve.com</p>
+</footer>
+
+</body>
+</html>

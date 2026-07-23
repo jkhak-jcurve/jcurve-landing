@@ -75,13 +75,20 @@
   }
 </style>
 <style>
-  .ct-hero{padding-top:64px;padding-bottom:8px;}
+  main{position:relative;}
+  .ct-bg{position:absolute;top:0;left:0;right:0;height:min(96vh,880px);z-index:0;pointer-events:none;overflow:hidden;
+    background:radial-gradient(ellipse 80% 60% at 50% 18%,#eaf1ff,rgba(234,241,255,0) 70%);}
+  .ct-bg .ct-bg-shader{position:absolute;inset:0;opacity:0.5;}
+  .ct-bg .ct-bg-veil{position:absolute;inset:0;
+    background:radial-gradient(ellipse 72% 60% at 50% 40%,rgba(255,255,255,0.66),rgba(255,255,255,0.34) 58%,rgba(255,255,255,0)),
+               linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0) 30%,rgba(255,255,255,0.55) 78%,#ffffff 100%);}
+  .ct-hero{padding-top:64px;padding-bottom:8px;position:relative;z-index:1;}
   .ct-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:100px;background:#eef3ff;color:#2450f5;font-family:'Montserrat';font-size:12.5px;font-weight:800;letter-spacing:0.14em;}
   .ct-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#2450f5;}
   .ct-hero h1{font-size:clamp(30px,4.6vw,46px);font-weight:800;letter-spacing:-1.2px;margin:20px 0 12px;word-break:keep-all;}
   .ct-hero h1 em{font-style:normal;color:#2450f5;}
   .ct-hero p{margin:0;color:#5d6c7b;font-size:17px;line-height:1.7;word-break:keep-all;}
-  .ct-formwrap{padding-top:40px;padding-bottom:96px;}
+  .ct-formwrap{padding-top:40px;padding-bottom:96px;position:relative;z-index:1;}
   .ct-card{background:#fff;border:1px solid #e8ebf1;border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,0.07);padding:clamp(28px,5vw,56px);max-width:1100px;margin:0 auto;}
   .ct-card-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-bottom:1px solid #eef0f4;padding-bottom:24px;margin-bottom:8px;}
   .ct-card-head h2{font-size:26px;font-weight:800;letter-spacing:-0.6px;margin:0 0 6px;}
@@ -157,6 +164,10 @@
   </div>
 </header>
 <main>
+<div class="ct-bg" aria-hidden="true">
+  <div class="ct-bg-shader" id="ctShader"></div>
+  <div class="ct-bg-veil"></div>
+</div>
 <section class="jc-sec ct-hero">
   <span class="ct-eyebrow">CONTACT — TEAM J-CURVE</span>
   <h1>당신의 <em>J 곡선</em>을 함께 그리겠습니다.</h1>
@@ -367,5 +378,19 @@
   <p style="margin:0;font-size:13.5px;line-height:1.9;color:#6b7280;">대표 : 장현민<span style="margin:0 9px;color:#c9ced8;">|</span>사업자등록번호 : 467-81-03548<span style="margin:0 9px;color:#c9ced8;">|</span>서울특별시 마포구 양화로 186, 526호-1(동교동)<br>이메일 : <a href="mailto:info@teamjcurve.com" style="color:#6b7280;">info@teamjcurve.com</a><span style="margin:0 9px;color:#c9ced8;">|</span>개인정보책임자 : 장현민</p>
   <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:#9aa1ac;"><span>© 2026 Team J-curve. All rights reserved.</span><span><a href="terms.html" style="color:#4b5563;font-weight:600;">이용약관</a> · <a href="privacy.html" style="color:#4b5563;font-weight:600;">개인정보처리방침</a></span></div>
 </footer>
+<script type="module">
+try {
+  const [{ createElement }, { createRoot }, { MeshGradient }] = await Promise.all([
+    import("https://esm.sh/react@18.3.1"),
+    import("https://esm.sh/react-dom@18.3.1/client"),
+    import("https://esm.sh/@paper-design/shaders-react@0.0.46?deps=react@18.3.1"),
+  ]);
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const p = { colors: ["#1456e6","#ebeafa","#ffffff"], distortion: 0.5, swirl: 0.18, grainMixer: 0, grainOverlay: 0, speed: 0.52, scale: 1.36, rotation: 120, offsetX: 0 };
+  createRoot(document.getElementById("ctShader")).render(
+    createElement(MeshGradient, { ...p, speed: reduced ? 0 : p.speed, style: { width: "100%", height: "100%" } })
+  );
+} catch (e) { console.warn("MeshGradient load failed, using CSS fallback:", e); }
+</script>
 </body>
 </html>

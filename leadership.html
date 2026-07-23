@@ -22,10 +22,10 @@
   .jc-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
   .jc-cc-track{display:flex;gap:24px;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1);}
   .jc-cc-wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:stretch;}
-  .jc-cc-navbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid #dde3e9;background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color 0.15s,background 0.15s;}
+  .jc-cc-navbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid #e6ebef;background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color 0.15s,background 0.15s;}
   .jc-cc-navbtn:hover{border-color:#1e3a8a;background:#eef3ff;}
   .jc-cc-navbtn[disabled]{opacity:0.35;cursor:default;}
-  .jc-cc-navbtn[disabled]:hover{border-color:#dde3e9;background:#fff;}
+  .jc-cc-navbtn[disabled]:hover{border-color:#e6ebef;background:#fff;}
   .jc-faq-item{border:1px solid #e6ebef;border-radius:18px;background:#fbfcfd;padding:24px 28px;cursor:pointer;}
   .jc-faq-item p{display:none;margin:16px 0 0;color:#5d6c7b;font-size:17px;line-height:1.65;}
   .jc-faq-item.open p{display:block;}
@@ -37,7 +37,7 @@
   @media(max-width:1024px){
     .jc-nav{display:none!important;}
     .jc-burger{display:inline-flex!important;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;}
-    .jc-burger span{display:block;width:24px;height:2px;background:#1c1e21;border-radius:2px;transition:transform .25s ease,opacity .2s ease;}
+    .jc-burger span{display:block;width:24px;height:2px;background:#0a1317;border-radius:2px;transition:transform .25s ease,opacity .2s ease;}
     .jc-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
     .jc-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
     .jc-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -45,7 +45,7 @@
     header.jc-sec img{width:124px!important;}
     .jc-mobmenu{position:fixed;top:82px;left:0;right:0;z-index:49;background:#fff;border-bottom:1px solid #eef1f5;box-shadow:0 14px 26px rgba(16,24,40,.09);display:flex;flex-direction:column;padding:6px 20px 18px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;}
     .jc-mobmenu.open{opacity:1;visibility:visible;transform:translateY(0);}
-    .jc-mobmenu a{padding:15px 6px;font-size:17px;font-weight:600;color:#1c1e21;border-bottom:1px solid #f1f3f6;text-decoration:none;}
+    .jc-mobmenu a{padding:15px 6px;font-size:17px;font-weight:600;color:#0a1317;border-bottom:1px solid #f4f6f9;text-decoration:none;}
     .jc-mobmenu a.active{color:#2450f5;}
     .jc-mobmenu a:last-child{border-bottom:0;}
     .jc-grid-2,.jc-grid-3,.jc-grid-4{grid-template-columns:1fr!important;}
@@ -70,10 +70,10 @@
   <a href="./" style="display:inline-flex;align-items:center;"><img src="assets/logo-horizon-a.png" alt="팀제이커브" style="width:150px;"></a>
   <nav class="jc-nav">
     <a href="leadership.html" style="padding:9px 16px;border-radius:100px;color:#0064e0;font-size:17px;font-weight:700;background:#eef3ff;">AI 리더십 교육</a>
-    <a href="job-skill.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 직무역량 교육</a>
-    <a href="org-dev.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 조직 개발</a>
-    <a href="cases.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">고객사례</a>
-    <a href="team.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">팀 소개</a>
+    <a href="job-skill.html" style="padding:9px 16px;border-radius:100px;color:#0a1317;font-size:17px;font-weight:600;">AI 직무역량 교육</a>
+    <a href="org-dev.html" style="padding:9px 16px;border-radius:100px;color:#0a1317;font-size:17px;font-weight:600;">AI 조직 개발</a>
+    <a href="cases.html" style="padding:9px 16px;border-radius:100px;color:#0a1317;font-size:17px;font-weight:600;">고객사례</a>
+    <a href="team.html" style="padding:9px 16px;border-radius:100px;color:#0a1317;font-size:17px;font-weight:600;">팀 소개</a>
   </nav>
   <div style="display:flex;align-items:center;gap:14px;">
     <a href="contact.html" style="display:inline-flex;align-items:center;min-height:44px;padding:11px 24px;border-radius:100px;color:#fff;font-size:16px;font-weight:700;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);box-shadow:0 8px 20px rgba(36,80,245,0.35),inset 0 1px 0 rgba(255,255,255,0.38);">문의하기</a>
@@ -108,19 +108,19 @@
       </div>
       <div class="jc-grid-4" style="max-width:1000px;">
         <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;background:rgba(255,255,255,0.8);border:1px solid #e6ebef;border-radius:18px;">
-          <span style="font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">대상</span>
+          <span style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">대상</span>
           <span style="font-size:17px;font-weight:700;color:#0a1317;">리더급 임직원</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;background:rgba(255,255,255,0.8);border:1px solid #e6ebef;border-radius:18px;">
-          <span style="font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">형태</span>
+          <span style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">형태</span>
           <span style="font-size:17px;font-weight:700;color:#0a1317;">특강 · 핸즈온 워크숍</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;background:rgba(255,255,255,0.8);border:1px solid #e6ebef;border-radius:18px;">
-          <span style="font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">시간</span>
+          <span style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">시간</span>
           <span style="font-size:17px;font-weight:700;color:#0a1317;">반나절 ~ 1일</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;background:rgba(255,255,255,0.8);border:1px solid #e6ebef;border-radius:18px;">
-          <span style="font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">방식</span>
+          <span style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;">방식</span>
           <span style="font-size:17px;font-weight:700;color:#0a1317;">조직 진단 후 맞춤 설계</span>
         </div>
       </div>
@@ -230,36 +230,36 @@
         <div style="display:grid;gap:12px;background:#f4f6f9;border:1px solid #e6ebef;border-radius:18px;padding:30px 34px;">
           <div style="font-size:21px;font-weight:700;color:#1e3a8a;word-break:keep-all;line-height:1.5;">AI를 처음 접하는 조직, 리더 그룹이라면, 이렇게 시작합니다</div>
           <p style="margin:0;font-size:18px;line-height:1.65;color:#5d6c7b;word-break:keep-all;">"조직에 처음 AI를 도입하는데 어떻게 시작해야 할지 막막하다"</p>
-          <div style="border-top:1px solid #e2e8f0;padding-top:16px;margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:13px;color:#5d6c7b;background:#fff;border:1px solid #e6ebef;border-radius:999px;padding:5px 13px;white-space:nowrap;">대상 <b style="color:#0a1317;font-weight:700;">경영진 · 리더</b></span>
-            <span style="font-size:13px;color:#5d6c7b;background:#fff;border:1px solid #e6ebef;border-radius:999px;padding:5px 13px;white-space:nowrap;">목적 <b style="color:#0a1317;font-weight:700;">인식 전환</b></span>
-            <span style="font-size:13px;color:#5d6c7b;background:#fff;border:1px solid #e6ebef;border-radius:999px;padding:5px 13px;white-space:nowrap;">수준 <b style="color:#0a1317;font-weight:700;">입문</b></span>
+          <div style="border-top:1px solid #e6ebef;padding-top:16px;margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:13px;color:#5d6c7b;background:#fff;border:1px solid #e6ebef;border-radius:100px;padding:5px 13px;white-space:nowrap;">대상 <b style="color:#0a1317;font-weight:700;">경영진 · 리더</b></span>
+            <span style="font-size:13px;color:#5d6c7b;background:#fff;border:1px solid #e6ebef;border-radius:100px;padding:5px 13px;white-space:nowrap;">목적 <b style="color:#0a1317;font-weight:700;">인식 전환</b></span>
+            <span style="font-size:13px;color:#5d6c7b;background:#fff;border:1px solid #e6ebef;border-radius:100px;padding:5px 13px;white-space:nowrap;">수준 <b style="color:#0a1317;font-weight:700;">입문</b></span>
           </div>
         </div>
         <div style="font-size:14px;font-weight:700;color:#8595a4;margin:16px 0 0;">[예시 커리큘럼]</div>
         <article style="display:flex;gap:22px;align-items:center;padding:26px 32px;border:1px solid #e6ebef;border-radius:20px;background:#fbfcfd;margin-top:14px;">
-          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat';font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">01</div>
+          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat','Pretendard',sans-serif;font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">01</div>
           <div>
             <h4 style="margin:0 0 4px;font-size:21px;font-weight:700;word-break:keep-all;">AI와 거리 좁히기 — 1시간 안에 만드는 첫 결과물</h4>
             <p style="margin:0;color:#5d6c7b;font-size:16px;line-height:1.55;word-break:keep-all;">프롬프트 한 줄로 미래 명함·비전 이미지를 직접 만들어 봅니다. "AI가 어렵다"는 거리감을 체험으로 허무는 시간입니다.</p>
           </div>
         </article>
         <article style="display:flex;gap:22px;align-items:center;padding:26px 32px;border:1px solid #e6ebef;border-radius:20px;background:#fbfcfd;margin-top:14px;">
-          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat';font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">02</div>
+          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat','Pretendard',sans-serif;font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">02</div>
           <div>
             <h4 style="margin:0 0 4px;font-size:21px;font-weight:700;word-break:keep-all;">우리 회사를 아는 AI — 자사 맥락으로 체험하기</h4>
             <p style="margin:0;color:#5d6c7b;font-size:16px;line-height:1.55;word-break:keep-all;">우리 회사의 산업·업무 언어를 넣고 AI와 문답해 봅니다. 일반 예제가 아닌 자사 맥락에서 AI의 실제 쓸모를 확인합니다.</p>
           </div>
         </article>
         <article style="display:flex;gap:22px;align-items:center;padding:26px 32px;border:1px solid #e6ebef;border-radius:20px;background:#fbfcfd;margin-top:14px;">
-          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat';font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">03</div>
+          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat','Pretendard',sans-serif;font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">03</div>
           <div>
             <h4 style="margin:0 0 4px;font-size:21px;font-weight:700;word-break:keep-all;">리더의 일 × AI — 보고 받고, 판단하는 방식 바꿔보기</h4>
             <p style="margin:0;color:#5d6c7b;font-size:16px;line-height:1.55;word-break:keep-all;">보고서 검토, 전략 검증, 회의 준비 같은 리더의 실제 업무에 AI를 적용해 봅니다. 관리 관점에서 AI를 보는 눈을 만듭니다.</p>
           </div>
         </article>
         <article style="display:flex;gap:22px;align-items:center;padding:26px 32px;border:1px solid #e6ebef;border-radius:20px;background:#fbfcfd;margin-top:14px;">
-          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat';font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">04</div>
+          <div style="flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;font-family:'Montserrat','Pretendard',sans-serif;font-weight:700;font-size:18px;background:linear-gradient(175deg,#3b5bd6 0%,#1e3a8a 55%,#14295e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35);">04</div>
           <div>
             <h4 style="margin:0 0 4px;font-size:21px;font-weight:700;word-break:keep-all;">우리 조직의 첫 적용 지점 정하기</h4>
             <p style="margin:0;color:#5d6c7b;font-size:16px;line-height:1.55;word-break:keep-all;">교육이 끝나기 전에, 각 리더가 자기 조직에서 AI를 먼저 적용할 한 가지를 정합니다. 경험이 곧바로 실행 계획으로 이어집니다.</p>
@@ -279,13 +279,13 @@
             <h3 style="margin:0 0 12px;font-size:26px;font-weight:700;letter-spacing:-0.5px;color:#0a1317;word-break:keep-all;">AI 활용 리더십 커뮤니케이션 실습</h3>
             <p style="margin:0 0 18px;font-size:17px;line-height:1.7;color:#5d6c7b;word-break:keep-all;"><b style="color:#1e3a8a;font-weight:700;">피드백과 목표 합의가 고민인 리더 그룹이라면</b> — 나의 성과관리 유형 진단에서 시작해, AI 가상 팀원과의 면담 시뮬레이션으로 상황별 대응을 연습합니다.</p>
             <div style="display:flex;flex-wrap:wrap;gap:8px;">
-              <span style="font-size:13px;color:#5d6c7b;background:#f7f9fb;border:1px solid #e6ebef;border-radius:999px;padding:5px 13px;white-space:nowrap;">대상 <b style="color:#0a1317;font-weight:700;">팀장 · 리더</b></span>
-              <span style="font-size:13px;color:#5d6c7b;background:#f7f9fb;border:1px solid #e6ebef;border-radius:999px;padding:5px 13px;white-space:nowrap;">목적 <b style="color:#0a1317;font-weight:700;">업무 적용</b></span>
-              <span style="font-size:13px;color:#5d6c7b;background:#f7f9fb;border:1px solid #e6ebef;border-radius:999px;padding:5px 13px;white-space:nowrap;">형태 <b style="color:#0a1317;font-weight:700;">AI 시뮬레이션</b></span>
+              <span style="font-size:13px;color:#5d6c7b;background:#f7f8fa;border:1px solid #e6ebef;border-radius:100px;padding:5px 13px;white-space:nowrap;">대상 <b style="color:#0a1317;font-weight:700;">팀장 · 리더</b></span>
+              <span style="font-size:13px;color:#5d6c7b;background:#f7f8fa;border:1px solid #e6ebef;border-radius:100px;padding:5px 13px;white-space:nowrap;">목적 <b style="color:#0a1317;font-weight:700;">업무 적용</b></span>
+              <span style="font-size:13px;color:#5d6c7b;background:#f7f8fa;border:1px solid #e6ebef;border-radius:100px;padding:5px 13px;white-space:nowrap;">형태 <b style="color:#0a1317;font-weight:700;">AI 시뮬레이션</b></span>
             </div>
           </div>
-          <div style="flex:1 1 260px;background:#f7f9fb;border:1px solid #e6ebef;border-radius:16px;padding:22px 26px;">
-            <div style="font-family:'Montserrat';font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;margin-bottom:8px;">Output</div>
+          <div style="flex:1 1 260px;background:#f7f8fa;border:1px solid #e6ebef;border-radius:16px;padding:22px 26px;">
+            <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8595a4;margin-bottom:8px;">Output</div>
             <div style="font-size:16.5px;font-weight:700;color:#0a1317;word-break:keep-all;line-height:1.5;">나의 피드백 패턴 리포트<br>&amp; 상황별 면담 질문지</div>
           </div>
         </div>
@@ -303,22 +303,22 @@
       </div>
       <div class="jc-grid-2">
         <div style="background:#fff;border:1px solid #e6ebef;border-radius:20px;padding:32px 30px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat';font-size:15px;font-weight:800;margin-bottom:16px;">1</div>
+          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat','Pretendard',sans-serif;font-size:15px;font-weight:800;margin-bottom:16px;">1</div>
           <h3 style="margin:0 0 10px;font-size:19.5px;font-weight:700;color:#0a1317;word-break:keep-all;line-height:1.45;">AI 도입의 시작점을 스스로 찾습니다</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.65;color:#5d6c7b;word-break:keep-all;">직접 다뤄봤기 때문에 어디부터 손댈지 실무진에게 넘기지 않고 리더가 정합니다. 막막함이 구체적인 출발점으로 바뀝니다.</p>
         </div>
         <div style="background:#fff;border:1px solid #e6ebef;border-radius:20px;padding:32px 30px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat';font-size:15px;font-weight:800;margin-bottom:16px;">2</div>
+          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat','Pretendard',sans-serif;font-size:15px;font-weight:800;margin-bottom:16px;">2</div>
           <h3 style="margin:0 0 10px;font-size:19.5px;font-weight:700;color:#0a1317;word-break:keep-all;line-height:1.45;">이미 AI를 쓰는 팀원에게 방향을 제시합니다</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.65;color:#5d6c7b;word-break:keep-all;">구성원이 먼저 앞서가는 상황에서, 리더가 기준과 방향으로 따라잡습니다. 지시가 아니라 납득되는 기준을 제시합니다.</p>
         </div>
         <div style="background:#fff;border:1px solid #e6ebef;border-radius:20px;padding:32px 30px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat';font-size:15px;font-weight:800;margin-bottom:16px;">3</div>
+          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat','Pretendard',sans-serif;font-size:15px;font-weight:800;margin-bottom:16px;">3</div>
           <h3 style="margin:0 0 10px;font-size:19.5px;font-weight:700;color:#0a1317;word-break:keep-all;line-height:1.45;">올라오는 AI 활용 보고를 가늠할 수 있습니다</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.65;color:#5d6c7b;word-break:keep-all;">AI로 무엇이 가능하고 무엇이 어려운지 본인 손으로 확인했기 때문에, 보고와 제안을 그대로 받지 않고 판단합니다.</p>
         </div>
         <div style="background:#fff;border:1px solid #e6ebef;border-radius:20px;padding:32px 30px;">
-          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat';font-size:15px;font-weight:800;margin-bottom:16px;">4</div>
+          <div style="width:40px;height:40px;border-radius:12px;background:#e8edfa;color:#1e3a8a;display:grid;place-items:center;font-family:'Montserrat','Pretendard',sans-serif;font-size:15px;font-weight:800;margin-bottom:16px;">4</div>
           <h3 style="margin:0 0 10px;font-size:19.5px;font-weight:700;color:#0a1317;word-break:keep-all;line-height:1.45;">다음 단계를 결정할 근거가 생깁니다</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.65;color:#5d6c7b;word-break:keep-all;">전사 확산이든 직무 교육이든, 다음 단계를 경험을 근거로 결정합니다. 도입 논의가 미뤄지지 않습니다.</p>
         </div>
@@ -397,10 +397,10 @@
     <style>
       .jc-cc-wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:stretch;}
       .jc-cc-track{display:flex;gap:24px;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1);}
-      .jc-cc-navbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid #dde3e9;background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color 0.15s,background 0.15s;}
+      .jc-cc-navbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid #e6ebef;background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color 0.15s,background 0.15s;}
       .jc-cc-navbtn:hover{border-color:#1e3a8a;background:#eef3ff;}
       .jc-cc-navbtn[disabled]{opacity:0.35;cursor:default;}
-      .jc-cc-navbtn[disabled]:hover{border-color:#dde3e9;background:#fff;}
+      .jc-cc-navbtn[disabled]:hover{border-color:#e6ebef;background:#fff;}
       @media(max-width:1024px){
         .jc-cc-wrap{grid-template-columns:1fr!important;gap:32px!important;}
         .jc-cc-nav{display:none!important;}
@@ -438,11 +438,11 @@
             <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;">
             <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#1c2733;word-break:keep-all;">협력사 견적서 비교·총단가 산출 실습</span>
+              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">협력사 견적서 비교·총단가 산출 실습</span>
             </div>
             <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#1c2733;word-break:keep-all;">매일 아침 원자재 시세·시황 리포트 자동 발송 실습</span>
+              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">매일 아침 원자재 시세·시황 리포트 자동 발송 실습</span>
             </div>
             </div>
           </div>
@@ -459,11 +459,11 @@
             <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;">
             <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#1c2733;word-break:keep-all;">시장 리포트 요약 → 임원 보고 1페이지 작성 실습</span>
+              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">시장 리포트 요약 → 임원 보고 1페이지 작성 실습</span>
             </div>
             <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#1c2733;word-break:keep-all;">고객 상담 요약·맞춤 제안 초안 실습</span>
+              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">고객 상담 요약·맞춤 제안 초안 실습</span>
             </div>
             </div>
           </div>
@@ -480,11 +480,11 @@
             <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;">
             <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#1c2733;word-break:keep-all;">시장·경쟁사 데이터 주간 리포트 에이전트 설계 실습</span>
+              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">시장·경쟁사 데이터 주간 리포트 에이전트 설계 실습</span>
             </div>
             <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#1c2733;word-break:keep-all;">시황 브리핑·공급망 리스크 알림 에이전트 설계 실습</span>
+              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">시황 브리핑·공급망 리스크 알림 에이전트 설계 실습</span>
             </div>
             </div>
           </div>
@@ -534,7 +534,7 @@
   </section>
 
   <!-- [7] 레퍼런스 로고 카드 -->
-  <section class="jc-sec" style="padding:96px 64px;background:#fafbfc;">
+  <section class="jc-sec" style="padding:96px 64px;background:#fbfcfd;">
     <div style="max-width:1232px;margin:0 auto;">
       <div style="max-width:820px;margin:0 auto 44px;text-align:center;">
         <h2 style="margin:0;font-size:42px;font-weight:600;line-height:1.3;letter-spacing:-0.8px;color:#0a1317;word-break:keep-all;">이미 많은 조직의 리더들이<br>팀제이커브와 시작했습니다</h2>
@@ -612,13 +612,13 @@
 
 </main>
 
-<footer class="jc-sec" style="background:#f7f8fa;border-top:1px solid #e8eaef;padding:56px 32px 40px;text-align:center;color:#5d6570;">
+<footer class="jc-sec" style="background:#f7f8fa;border-top:1px solid #e6ebef;padding:56px 32px 40px;text-align:center;color:#5d6c7b;">
   <img src="assets/logo-horizon-b.png" alt="팀제이커브" style="width:200px;max-width:70vw;display:inline-block;">
-  <nav style="display:flex;justify-content:center;flex-wrap:wrap;gap:4px 26px;margin:26px 0 30px;"><a href="index.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">Home</a><a href="leadership.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 리더십 교육</a><a href="job-skill.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 직무역량 교육</a><a href="org-dev.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 조직 개발</a><a href="cases.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">고객사례</a><a href="team.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">팀 소개</a><a href="contact.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">문의하기</a></nav>
-  <hr style="border:0;border-top:1px solid #e5e8ee;margin:0 auto 28px;max-width:880px;">
-  <p style="margin:0 0 10px;font-size:15px;font-weight:700;color:#2a2e35;">주식회사 팀제이커브</p>
-  <p style="margin:0;font-size:13.5px;line-height:1.9;color:#6b7280;">대표 : 장현민<span style="margin:0 9px;color:#c9ced8;">|</span>사업자등록번호 : 467-81-03548<span style="margin:0 9px;color:#c9ced8;">|</span>서울특별시 마포구 양화로 186, 526호-1(동교동)<br>이메일 : <a href="mailto:info@teamjcurve.com" style="color:#6b7280;">info@teamjcurve.com</a><span style="margin:0 9px;color:#c9ced8;">|</span>개인정보책임자 : 장현민</p>
-  <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:#9aa1ac;"><span>© 2026 Team J-curve. All rights reserved.</span><span><a href="terms.html" style="color:#4b5563;font-weight:600;">이용약관</a> · <a href="privacy.html" style="color:#4b5563;font-weight:600;">개인정보처리방침</a></span></div>
+  <nav style="display:flex;justify-content:center;flex-wrap:wrap;gap:4px 26px;margin:26px 0 30px;"><a href="index.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">Home</a><a href="leadership.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">AI 리더십 교육</a><a href="job-skill.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">AI 직무역량 교육</a><a href="org-dev.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">AI 조직 개발</a><a href="cases.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">고객사례</a><a href="team.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">팀 소개</a><a href="contact.html" style="color:#0a1317;font-size:14.5px;font-weight:600;">문의하기</a></nav>
+  <hr style="border:0;border-top:1px solid #e6ebef;margin:0 auto 28px;max-width:880px;">
+  <p style="margin:0 0 10px;font-size:15px;font-weight:700;color:#3c4654;">주식회사 팀제이커브</p>
+  <p style="margin:0;font-size:13.5px;line-height:1.9;color:#5d6c7b;">대표 : 장현민<span style="margin:0 9px;color:#c9ced8;">|</span>사업자등록번호 : 467-81-03548<span style="margin:0 9px;color:#c9ced8;">|</span>서울특별시 마포구 양화로 186, 526호-1(동교동)<br>이메일 : <a href="mailto:info@teamjcurve.com" style="color:#5d6c7b;">info@teamjcurve.com</a><span style="margin:0 9px;color:#c9ced8;">|</span>개인정보책임자 : 장현민</p>
+  <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:#8595a4;"><span>© 2026 Team J-curve. All rights reserved.</span><span><a href="terms.html" style="color:#3c4654;font-weight:600;">이용약관</a> · <a href="privacy.html" style="color:#3c4654;font-weight:600;">개인정보처리방침</a></span></div>
 </footer>
 
 <script>

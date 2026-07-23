@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문의하기 — 팀제이커브</title>
+<meta name="description" content="팀제이커브 AI 교육 문의 — 리더십·직무역량·조직 개발 프로그램 상담을 접수하세요. 영업일 기준 2일 이내 회신드립니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#fff;font-family:'Pretendard','Montserrat',system-ui,-apple-system,sans-serif;color:#0a1317;letter-spacing:-0.2px;}
+  a{text-decoration:none;color:inherit;}
+  a:hover{color:#0064e0;}
+  img{display:block;max-width:100%;}
+  h1,h2,h3,p{margin-top:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  main{padding-top:82px;}
+  .jc-sec{padding-left:max(32px,calc((100% - 1232px)/2))!important;padding-right:max(32px,calc((100% - 1232px)/2))!important;}
+  .jc-wrap{max-width:1232px;margin:0 auto;}
+  .jc-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:6px;white-space:nowrap;}
+  .jc-eyebrow{font-family:'Montserrat';font-size:13px;font-weight:800;letter-spacing:0.14em;color:#2450f5;text-transform:uppercase;margin-bottom:12px;}
+  .jc-h2{font-family:'Montserrat';margin:0 0 16px;font-size:38px;font-weight:800;letter-spacing:-0.4px;color:#0a1317;word-break:keep-all;line-height:1.15;}
+  .jc-lead-p{margin:0;max-width:760px;font-size:18px;line-height:1.75;color:#5d6c7b;word-break:keep-all;}
+  .jc-shead{margin-bottom:44px;}
+  .jc-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .jc-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .jc-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+
+  .jc-crew{background:#fff;border:1px solid #e6ebef;border-radius:22px;padding:38px 30px 34px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .18s,box-shadow .18s;}
+  .jc-crew:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,.1);}
+  .jc-crew-ic{width:112px;height:112px;margin-bottom:20px;}
+  .jc-crew-ic img{width:100%;height:100%;object-fit:contain;}
+  .jc-crew-tag{font-family:'Montserrat';font-size:13px;font-weight:800;letter-spacing:0.12em;color:#2450f5;}
+  .jc-crew-title{font-size:21px;font-weight:700;margin:6px 0 12px;letter-spacing:-0.4px;}
+  .jc-crew-desc{margin:0;font-size:15.5px;line-height:1.7;color:#5d6c7b;word-break:keep-all;}
+
+  .jc-lead{display:flex;gap:30px;align-items:center;background:#fff;border:1px solid #e6ebef;border-radius:24px;padding:30px;transition:transform .18s,box-shadow .18s;}
+  .jc-lead:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(10,19,23,.1);}
+  .jc-lead-ph{flex:0 0 168px;width:168px;height:168px;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#eef3ff,#dbe6ff);}
+  .jc-lead-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-lead-body{display:grid;gap:9px;}
+  .jc-lead-role{font-family:'Montserrat';font-size:13px;font-weight:700;letter-spacing:0.06em;color:#2450f5;}
+  .jc-lead-name{font-size:28px;font-weight:800;letter-spacing:-0.6px;}
+
+  .jc-mem{display:flex;flex-direction:column;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+  .jc-mem:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,.1);}
+  .jc-mem-ph{aspect-ratio:1/1;background:linear-gradient(160deg,#eef3ff,#e2ebff);}
+  .jc-mem-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-mem-body{padding:22px 24px 26px;display:grid;gap:9px;}
+  .jc-mem-role{font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.05em;color:#2450f5;}
+  .jc-mem-name{font-size:21px;font-weight:800;letter-spacing:-0.5px;}
+  .jc-mem-cred{display:grid;gap:6px;margin-top:4px;}
+  .jc-mem-cred li{position:relative;padding-left:14px;font-size:14px;line-height:1.55;color:#5d6c7b;word-break:keep-all;}
+  .jc-mem-cred li::before{content:"";position:absolute;left:2px;top:9px;width:4px;height:4px;border-radius:50%;background:#c3ccd6;}
+
+  .jc-nat{background:#0b1020;border:1px solid #1b2540;border-radius:22px;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+  .jc-nat:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,16,32,.4);}
+  .jc-nat-ph{position:relative;aspect-ratio:1/1;background:#111;}
+  .jc-nat-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-nat-badge{position:absolute;top:12px;left:12px;font-family:'Montserrat';font-size:11px;font-weight:800;letter-spacing:0.1em;color:#fff;background:rgba(36,80,245,0.9);padding:5px 10px;border-radius:100px;}
+  .jc-nat-body{padding:18px 18px 22px;}
+  .jc-nat-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.4px;}
+  .jc-nat-role{margin-top:5px;font-size:13.5px;color:#9fb0d0;line-height:1.5;word-break:keep-all;}
+
+  @media(max-width:1024px){
+    .jc-nav{display:none!important;}
+    .jc-grid-3,.jc-grid-2{grid-template-columns:1fr!important;}
+    .jc-grid-5{grid-template-columns:repeat(2,1fr)!important;}
+    .jc-hero-h1{font-size:38px!important;}
+    .jc-lead{flex-direction:column;align-items:flex-start;text-align:left;}
+    .jc-lead-ph{width:130px;height:130px;flex-basis:auto;}
+  }
+</style>
+<style>
+  .ct-hero{padding-top:64px;padding-bottom:8px;}
+  .ct-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:100px;background:#eef3ff;color:#2450f5;font-family:'Montserrat';font-size:12.5px;font-weight:800;letter-spacing:0.14em;}
+  .ct-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#2450f5;}
+  .ct-hero h1{font-size:clamp(30px,4.6vw,46px);font-weight:800;letter-spacing:-1.2px;margin:20px 0 12px;word-break:keep-all;}
+  .ct-hero h1 em{font-style:normal;color:#2450f5;}
+  .ct-hero p{margin:0;color:#5d6c7b;font-size:17px;line-height:1.7;word-break:keep-all;}
+  .ct-formwrap{padding-top:40px;padding-bottom:96px;}
+  .ct-card{background:#fff;border:1px solid #e8ebf1;border-radius:24px;box-shadow:0 20px 60px rgba(15,23,42,0.07);padding:clamp(28px,5vw,56px);max-width:1100px;margin:0 auto;}
+  .ct-card-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-bottom:1px solid #eef0f4;padding-bottom:24px;margin-bottom:8px;}
+  .ct-card-head h2{font-size:26px;font-weight:800;letter-spacing:-0.6px;margin:0 0 6px;}
+  .ct-card-head p{margin:0;color:#5d6c7b;font-size:15px;}
+  .ct-progress{min-width:220px;}
+  .ct-progress .ct-plabel{display:flex;justify-content:space-between;font-size:13px;color:#5d6c7b;margin-bottom:7px;font-weight:600;}
+  .ct-progress .ct-plabel b{color:#2450f5;font-variant-numeric:tabular-nums;}
+  .ct-pbar{height:6px;border-radius:100px;background:#edf0f5;overflow:hidden;}
+  .ct-pbar i{display:block;height:100%;width:0%;border-radius:100px;background:linear-gradient(90deg,#6f9bff,#2450f5);transition:width 0.35s ease;}
+  .ct-group{padding:34px 0 6px;}
+  .ct-gtitle{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
+  .ct-gnum{font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:700;color:#2450f5;background:#eef3ff;border-radius:8px;padding:4px 9px;}
+  .ct-gtitle h3{margin:0;font-size:18px;font-weight:700;letter-spacing:-0.4px;}
+  .ct-gtitle .ct-gopt{font-size:13px;color:#8a93a1;font-weight:600;}
+  .ct-gtitle::after{content:"";flex:1;height:1px;background:#eef0f4;}
+  .ct-grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px 24px;}
+  @media (max-width:720px){.ct-grid2{grid-template-columns:1fr;}}
+  .ct-field{display:flex;flex-direction:column;gap:8px;}
+  .ct-field.ct-full{grid-column:1 / -1;}
+  .ct-flabel{font-size:14.5px;font-weight:700;color:#1c1e21;}
+  .ct-flabel .ct-req{color:#e2452c;margin-left:3px;}
+  .ct-flabel .ct-hint{font-weight:500;color:#8a93a1;font-size:13px;margin-left:8px;}
+  .ct-field input[type=text],.ct-field input[type=email],.ct-field input[type=tel],.ct-field input[type=date],.ct-field textarea{font:inherit;font-size:15.5px;color:#0a1317;background:#fbfcfe;border:1.5px solid #e3e7ee;border-radius:12px;padding:13px 16px;outline:none;transition:border-color 0.15s ease,box-shadow 0.15s ease;width:100%;box-sizing:border-box;}
+  .ct-field input:focus,.ct-field textarea:focus{border-color:#2450f5;box-shadow:0 0 0 3px rgba(36,80,245,0.12);background:#fff;}
+  .ct-field textarea{min-height:150px;resize:vertical;line-height:1.7;}
+  .ct-charcount{align-self:flex-end;font-size:12.5px;color:#8a93a1;font-variant-numeric:tabular-nums;}
+  .ct-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  @media (max-width:860px){.ct-cats{grid-template-columns:repeat(2,1fr);}}
+  .ct-cat{position:relative;}
+  .ct-cat input{position:absolute;opacity:0;pointer-events:none;}
+  .ct-cat .ct-catbox{display:flex;flex-direction:column;gap:4px;border:1.5px solid #e3e7ee;border-radius:14px;padding:16px 18px;cursor:pointer;background:#fbfcfe;transition:border-color 0.15s ease,background 0.15s ease,box-shadow 0.15s ease;height:100%;box-sizing:border-box;}
+  .ct-cat .ct-catbox b{font-size:15.5px;letter-spacing:-0.3px;}
+  .ct-cat .ct-catbox span{font-size:13px;color:#8a93a1;}
+  .ct-cat input:checked + .ct-catbox{border-color:#2450f5;background:#f4f7ff;box-shadow:0 0 0 3px rgba(36,80,245,0.1);}
+  .ct-cat input:checked + .ct-catbox b{color:#2450f5;}
+  .ct-cat input:focus-visible + .ct-catbox{outline:2px solid #2450f5;outline-offset:2px;}
+  #ctEtcInput{display:none;margin-top:12px;}
+  #ctEtcInput.ct-show{display:block;}
+  .ct-optional{background:#f7f8fa;border:1px solid #eceef2;border-radius:16px;padding:26px 28px;display:grid;gap:24px;}
+  .ct-chips{display:flex;flex-wrap:wrap;gap:10px;}
+  .ct-chip{position:relative;}
+  .ct-chip input{position:absolute;opacity:0;pointer-events:none;}
+  .ct-chip .ct-chiplabel{display:inline-flex;align-items:center;padding:10px 18px;border-radius:100px;border:1.5px solid #dfe3ea;background:#fff;font-size:14.5px;font-weight:600;color:#3a4450;cursor:pointer;transition:all 0.15s ease;}
+  .ct-chip input:checked + .ct-chiplabel{border-color:#2450f5;background:#2450f5;color:#fff;}
+  .ct-chip input:focus-visible + .ct-chiplabel{outline:2px solid #2450f5;outline-offset:2px;}
+  #ctDateDirect{display:none;margin-top:12px;max-width:260px;}
+  #ctDateDirect.ct-show{display:block;}
+  .ct-consent{border:1.5px solid #e3e7ee;border-radius:16px;padding:22px 24px;margin-top:34px;display:grid;gap:14px;}
+  .ct-consent-row{display:flex;align-items:flex-start;gap:11px;}
+  .ct-consent-row input[type=checkbox]{width:20px;height:20px;margin:1px 0 0;accent-color:#2450f5;cursor:pointer;flex:none;}
+  .ct-consent-row label{font-size:15px;font-weight:600;cursor:pointer;line-height:1.55;}
+  .ct-consent-row .ct-creq{color:#2450f5;font-weight:800;}
+  .ct-consent-row a{color:inherit;text-decoration:underline;text-underline-offset:3px;}
+  .ct-submitwrap{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:40px;}
+  .ct-submitbtn{display:inline-flex;align-items:center;gap:9px;min-height:58px;padding:17px 52px;border-radius:100px;border:0;cursor:pointer;font:inherit;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);box-shadow:0 14px 34px rgba(36,80,245,0.35),inset 0 1px 0 rgba(255,255,255,0.35);transition:transform 0.15s ease,box-shadow 0.15s ease,opacity 0.15s ease;}
+  .ct-submitbtn:not(:disabled):hover{transform:translateY(-2px);}
+  .ct-submitbtn:disabled{opacity:0.35;cursor:not-allowed;box-shadow:none;background:#9aa6b8;}
+  .ct-submitnote{font-size:13.5px;color:#8a93a1;text-align:center;}
+</style>
+</head>
+<body id="top">
+<header class="jc-sec" style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;height:82px;padding:0 44px;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #eef1f5;">
+  <a href="./" style="display:inline-flex;align-items:center;"><img src="assets/logo-horizon-a.png" alt="팀제이커브" style="width:150px;"></a>
+  <nav class="jc-nav">
+    <a href="leadership.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 리더십 교육</a>
+    <a href="job-skill.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 직무역량 교육</a>
+    <a href="org-dev.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 조직 개발</a>
+    <a href="cases.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">고객사례</a>
+    <a href="team.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">팀 소개</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <a href="#contact" style="display:inline-flex;align-items:center;min-height:44px;padding:11px 24px;border-radius:100px;color:#fff;font-size:16px;font-weight:700;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);box-shadow:0 8px 20px rgba(36,80,245,0.35),inset 0 1px 0 rgba(255,255,255,0.38);">문의하기</a>
+  </div>
+</header>
+<main>
+<section class="jc-sec ct-hero">
+  <span class="ct-eyebrow">CONTACT — TEAM J-CURVE</span>
+  <h1>당신의 <em>J 곡선</em>을 함께 그리겠습니다.</h1>
+  <p>초기의 불확실을 지나 가파른 성장 곡선에 이르기까지 — AI Native Partner 팀제이커브가 함께합니다.</p>
+</section>
+
+<section class="jc-sec ct-formwrap">
+  <form class="ct-card" id="ctForm" novalidate>
+    <div class="ct-card-head">
+      <div>
+        <h2>어떤 변화를 함께 만들까요?</h2>
+        <p>아래 한 폼만 작성해주시면 영업일 기준 2일 이내에 회신드립니다.</p>
+      </div>
+      <div class="ct-progress">
+        <div class="ct-plabel"><span>작성 진행률</span><b id="ctPcount">0 / 8</b></div>
+        <div class="ct-pbar"><i id="ctPfill"></i></div>
+      </div>
+    </div>
+
+    <div class="ct-group">
+      <div class="ct-gtitle"><span class="ct-gnum">01</span><h3>프로젝트 개요</h3></div>
+      <div class="ct-grid2">
+        <div class="ct-field">
+          <label class="ct-flabel" for="ctCompany">회사명<span class="ct-req">*</span></label>
+          <input type="text" id="ctCompany" data-req placeholder="예: TEAM J-CURVE">
+        </div>
+        <div class="ct-field">
+          <label class="ct-flabel" for="ctSubject">문의 제목<span class="ct-req">*</span></label>
+          <input type="text" id="ctSubject" data-req placeholder="한 줄 요약">
+        </div>
+        <div class="ct-field ct-full">
+          <label class="ct-flabel">의뢰 업무<span class="ct-req">*</span><span class="ct-hint">관심 있는 분야를 모두 선택해주세요 · 복수 선택 가능</span></label>
+          <div class="ct-cats">
+            <label class="ct-cat"><input type="checkbox" name="ctCat" value="AI 리더십 교육">
+              <span class="ct-catbox"><b>AI 리더십 교육</b><span>리더가 먼저 경험하는 AI</span></span></label>
+            <label class="ct-cat"><input type="checkbox" name="ctCat" value="AI 직무역량 교육">
+              <span class="ct-catbox"><b>AI 직무역량 교육</b><span>실무에 바로 쓰는 AI</span></span></label>
+            <label class="ct-cat"><input type="checkbox" name="ctCat" value="AI 조직 개발">
+              <span class="ct-catbox"><b>AI 조직 개발</b><span>함께 일하는 조직 설계</span></span></label>
+            <label class="ct-cat"><input type="checkbox" name="ctCat" value="기타" id="ctCatEtc">
+              <span class="ct-catbox"><b>기타</b><span>직접 입력할게요</span></span></label>
+          </div>
+          <input type="text" id="ctEtcInput" placeholder="의뢰하실 내용을 간단히 적어주세요 (예: AI 캠프, 강연 등)">
+        </div>
+        <div class="ct-field ct-full">
+          <label class="ct-flabel" for="ctDetail">의뢰 내용<span class="ct-req">*</span></label>
+          <textarea id="ctDetail" data-req maxlength="2000" placeholder="현재 고민하고 계신 과제, 기대하시는 결과, 대상자(인원/직군) 등을 자유롭게 적어주세요."></textarea>
+          <span class="ct-charcount"><span id="ctDcount">0</span> / 2000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ct-group">
+      <div class="ct-gtitle"><span class="ct-gnum">02</span><h3>담당자 정보</h3></div>
+      <div class="ct-grid2">
+        <div class="ct-field">
+          <label class="ct-flabel" for="ctName">담당자<span class="ct-req">*</span></label>
+          <input type="text" id="ctName" data-req placeholder="이름">
+        </div>
+        <div class="ct-field">
+          <label class="ct-flabel" for="ctRole">직책<span class="ct-req">*</span></label>
+          <input type="text" id="ctRole" data-req placeholder="팀 / 직책">
+        </div>
+        <div class="ct-field">
+          <label class="ct-flabel" for="ctPhone">연락처<span class="ct-req">*</span></label>
+          <input type="tel" id="ctPhone" data-req placeholder="010-0000-0000">
+        </div>
+        <div class="ct-field">
+          <label class="ct-flabel" for="ctEmail">이메일<span class="ct-req">*</span></label>
+          <input type="email" id="ctEmail" data-req placeholder="name@company.com">
+        </div>
+      </div>
+    </div>
+
+    <div class="ct-group">
+      <div class="ct-gtitle"><span class="ct-gnum">03</span><h3>선택 사항</h3><span class="ct-gopt">입력하지 않아도 접수됩니다</span></div>
+      <div class="ct-optional">
+        <div class="ct-field">
+          <span class="ct-flabel">희망 시작 시기</span>
+          <div class="ct-chips">
+            <label class="ct-chip"><input type="radio" name="ctWhen" value="1개월 이내"><span class="ct-chiplabel">1개월 이내</span></label>
+            <label class="ct-chip"><input type="radio" name="ctWhen" value="1~3개월"><span class="ct-chiplabel">1~3개월</span></label>
+            <label class="ct-chip"><input type="radio" name="ctWhen" value="3~6개월"><span class="ct-chiplabel">3~6개월</span></label>
+            <label class="ct-chip"><input type="radio" name="ctWhen" value="미정 · 협의"><span class="ct-chiplabel">미정 · 협의</span></label>
+            <label class="ct-chip"><input type="radio" name="ctWhen" value="직접선택" id="ctWhenDirect"><span class="ct-chiplabel">📅 날짜로 직접 선택</span></label>
+          </div>
+          <input type="date" id="ctDateDirect">
+        </div>
+        <div class="ct-field">
+          <span class="ct-flabel">선호 연락 방식</span>
+          <div class="ct-chips">
+            <label class="ct-chip"><input type="checkbox" name="ctHow" value="이메일"><span class="ct-chiplabel">이메일</span></label>
+            <label class="ct-chip"><input type="checkbox" name="ctHow" value="전화"><span class="ct-chiplabel">전화</span></label>
+            <label class="ct-chip"><input type="checkbox" name="ctHow" value="온라인 미팅"><span class="ct-chiplabel">온라인 미팅</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ct-consent">
+      <div class="ct-consent-row">
+        <input type="checkbox" id="ctAgreePrivacy">
+        <label for="ctAgreePrivacy"><span class="ct-creq">(필수)</span> <a href="privacy.html" target="_blank" rel="noopener">개인정보 수집 및 이용</a>에 동의합니다</label>
+      </div>
+      <div class="ct-consent-row">
+        <input type="checkbox" id="ctAgreeAge">
+        <label for="ctAgreeAge"><span class="ct-creq">(필수)</span> 만 14세 이상입니다</label>
+      </div>
+    </div>
+
+    <div class="ct-submitwrap">
+      <button type="submit" class="ct-submitbtn" id="ctSubmitBtn" disabled>문의 접수하기 <span aria-hidden="true">→</span></button>
+      <span class="ct-submitnote" id="ctSubmitNote">필수 항목과 동의를 완료하면 버튼이 활성화됩니다</span>
+    </div>
+  </form>
+</section>
+</main>
+
+<script>
+(function(){
+  var form = document.getElementById('ctForm');
+  var reqInputs = Array.prototype.slice.call(form.querySelectorAll('[data-req]'));
+  var pcount = document.getElementById('ctPcount');
+  var pfill = document.getElementById('ctPfill');
+  var submitBtn = document.getElementById('ctSubmitBtn');
+  var submitNote = document.getElementById('ctSubmitNote');
+  var TOTAL = 8;
+
+  function catDone(){
+    var checked = form.querySelectorAll('input[name=ctCat]:checked');
+    if (!checked.length) return false;
+    var etc = document.getElementById('ctCatEtc');
+    if (etc.checked && checked.length === 1) return document.getElementById('ctEtcInput').value.trim() !== '';
+    return true;
+  }
+  function filledCount(){
+    var n = reqInputs.filter(function(el){ return el.value.trim() !== ''; }).length;
+    if (catDone()) n += 1;
+    return n;
+  }
+  function consentDone(){
+    return document.getElementById('ctAgreePrivacy').checked && document.getElementById('ctAgreeAge').checked;
+  }
+  function refresh(){
+    var n = filledCount();
+    pcount.textContent = n + ' / ' + TOTAL;
+    pfill.style.width = (n / TOTAL * 100) + '%';
+    var ok = (n === TOTAL) && consentDone();
+    submitBtn.disabled = !ok;
+    submitNote.style.display = ok ? 'none' : '';
+  }
+
+  form.addEventListener('input', refresh);
+  form.addEventListener('change', function(){
+    document.getElementById('ctEtcInput').classList.toggle('ct-show', document.getElementById('ctCatEtc').checked);
+    document.getElementById('ctDateDirect').classList.toggle('ct-show', document.getElementById('ctWhenDirect').checked);
+    refresh();
+  });
+
+  var detail = document.getElementById('ctDetail');
+  detail.addEventListener('input', function(){
+    document.getElementById('ctDcount').textContent = detail.value.length;
+  });
+
+  function vals(name){
+    return Array.prototype.slice.call(form.querySelectorAll('input[name=' + name + ']:checked')).map(function(el){ return el.value; });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (submitBtn.disabled) return;
+    var cats = vals('ctCat');
+    if (cats.indexOf('기타') > -1) {
+      var etcTxt = document.getElementById('ctEtcInput').value.trim();
+      cats[cats.indexOf('기타')] = '기타(' + etcTxt + ')';
+    }
+    var when = vals('ctWhen')[0] || '';
+    if (when === '직접선택') when = document.getElementById('ctDateDirect').value || '직접선택(날짜 미입력)';
+    var lines = [
+      '[팀제이커브 교육 문의]',
+      '',
+      '■ 회사명 : ' + document.getElementById('ctCompany').value,
+      '■ 의뢰 업무 : ' + cats.join(', '),
+      '■ 의뢰 내용 :',
+      document.getElementById('ctDetail').value,
+      '',
+      '■ 담당자 : ' + document.getElementById('ctName').value + ' / ' + document.getElementById('ctRole').value,
+      '■ 연락처 : ' + document.getElementById('ctPhone').value,
+      '■ 이메일 : ' + document.getElementById('ctEmail').value,
+      '■ 희망 시작 시기 : ' + (when || '미입력'),
+      '■ 선호 연락 방식 : ' + (vals('ctHow').join(', ') || '미입력'),
+      '',
+      '※ 개인정보 수집·이용 동의(필수) 및 만 14세 이상 확인 완료'
+    ];
+    var subject = '[교육 문의] ' + document.getElementById('ctSubject').value + ' — ' + document.getElementById('ctCompany').value;
+    location.href = 'mailto:info@teamjcurve.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    submitNote.style.display = '';
+    submitNote.textContent = '메일 앱이 열리면 내용 확인 후 전송 버튼을 눌러주세요. 메일 앱이 열리지 않으면 info@teamjcurve.com 으로 보내주세요.';
+  });
+})();
+</script>
+
+<footer class="jc-sec" style="background:#f7f8fa;border-top:1px solid #e8eaef;padding:56px 32px 40px;text-align:center;color:#5d6570;">
+  <img src="assets/logo-horizon-b.png" alt="팀제이커브" style="width:200px;max-width:70vw;display:inline-block;">
+  <nav style="display:flex;justify-content:center;flex-wrap:wrap;gap:4px 26px;margin:26px 0 30px;"><a href="index.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">Home</a><a href="leadership.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 리더십 교육</a><a href="job-skill.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 직무역량 교육</a><a href="org-dev.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 조직 개발</a><a href="cases.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">고객사례</a><a href="team.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">팀 소개</a><a href="contact.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">문의하기</a></nav>
+  <hr style="border:0;border-top:1px solid #e5e8ee;margin:0 auto 28px;max-width:880px;">
+  <p style="margin:0 0 10px;font-size:15px;font-weight:700;color:#2a2e35;">주식회사 팀제이커브</p>
+  <p style="margin:0;font-size:13.5px;line-height:1.9;color:#6b7280;">대표 : 장현민<span style="margin:0 9px;color:#c9ced8;">|</span>사업자등록번호 : 467-81-03548<span style="margin:0 9px;color:#c9ced8;">|</span>서울특별시 마포구 양화로 186, 526호-1(동교동)<br>이메일 : <a href="mailto:info@teamjcurve.com" style="color:#6b7280;">info@teamjcurve.com</a><span style="margin:0 9px;color:#c9ced8;">|</span>개인정보책임자 : 장현민</p>
+  <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:#9aa1ac;"><span>© 2026 Team J-curve. All rights reserved.</span><span><a href="terms.html" style="color:#4b5563;font-weight:600;">이용약관</a> · <a href="privacy.html" style="color:#4b5563;font-weight:600;">개인정보처리방침</a></span></div>
+</footer>
+</body>
+</html>

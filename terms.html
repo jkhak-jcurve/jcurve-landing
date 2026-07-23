@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이용약관 — 팀제이커브</title>
+<meta name="description" content="팀제이커브 웹사이트 이용약관">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#fff;font-family:'Pretendard','Montserrat',system-ui,-apple-system,sans-serif;color:#0a1317;letter-spacing:-0.2px;}
+  a{text-decoration:none;color:inherit;}
+  a:hover{color:#0064e0;}
+  img{display:block;max-width:100%;}
+  h1,h2,h3,p{margin-top:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  main{padding-top:82px;}
+  .jc-sec{padding-left:max(32px,calc((100% - 1232px)/2))!important;padding-right:max(32px,calc((100% - 1232px)/2))!important;}
+  .jc-wrap{max-width:1232px;margin:0 auto;}
+  .jc-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:6px;white-space:nowrap;}
+  .jc-eyebrow{font-family:'Montserrat';font-size:13px;font-weight:800;letter-spacing:0.14em;color:#2450f5;text-transform:uppercase;margin-bottom:12px;}
+  .jc-h2{font-family:'Montserrat';margin:0 0 16px;font-size:38px;font-weight:800;letter-spacing:-0.4px;color:#0a1317;word-break:keep-all;line-height:1.15;}
+  .jc-lead-p{margin:0;max-width:760px;font-size:18px;line-height:1.75;color:#5d6c7b;word-break:keep-all;}
+  .jc-shead{margin-bottom:44px;}
+  .jc-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .jc-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .jc-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+
+  .jc-crew{background:#fff;border:1px solid #e6ebef;border-radius:22px;padding:38px 30px 34px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .18s,box-shadow .18s;}
+  .jc-crew:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,.1);}
+  .jc-crew-ic{width:112px;height:112px;margin-bottom:20px;}
+  .jc-crew-ic img{width:100%;height:100%;object-fit:contain;}
+  .jc-crew-tag{font-family:'Montserrat';font-size:13px;font-weight:800;letter-spacing:0.12em;color:#2450f5;}
+  .jc-crew-title{font-size:21px;font-weight:700;margin:6px 0 12px;letter-spacing:-0.4px;}
+  .jc-crew-desc{margin:0;font-size:15.5px;line-height:1.7;color:#5d6c7b;word-break:keep-all;}
+
+  .jc-lead{display:flex;gap:30px;align-items:center;background:#fff;border:1px solid #e6ebef;border-radius:24px;padding:30px;transition:transform .18s,box-shadow .18s;}
+  .jc-lead:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(10,19,23,.1);}
+  .jc-lead-ph{flex:0 0 168px;width:168px;height:168px;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#eef3ff,#dbe6ff);}
+  .jc-lead-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-lead-body{display:grid;gap:9px;}
+  .jc-lead-role{font-family:'Montserrat';font-size:13px;font-weight:700;letter-spacing:0.06em;color:#2450f5;}
+  .jc-lead-name{font-size:28px;font-weight:800;letter-spacing:-0.6px;}
+
+  .jc-mem{display:flex;flex-direction:column;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+  .jc-mem:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,.1);}
+  .jc-mem-ph{aspect-ratio:1/1;background:linear-gradient(160deg,#eef3ff,#e2ebff);}
+  .jc-mem-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-mem-body{padding:22px 24px 26px;display:grid;gap:9px;}
+  .jc-mem-role{font-family:'Montserrat';font-size:12px;font-weight:700;letter-spacing:0.05em;color:#2450f5;}
+  .jc-mem-name{font-size:21px;font-weight:800;letter-spacing:-0.5px;}
+  .jc-mem-cred{display:grid;gap:6px;margin-top:4px;}
+  .jc-mem-cred li{position:relative;padding-left:14px;font-size:14px;line-height:1.55;color:#5d6c7b;word-break:keep-all;}
+  .jc-mem-cred li::before{content:"";position:absolute;left:2px;top:9px;width:4px;height:4px;border-radius:50%;background:#c3ccd6;}
+
+  .jc-nat{background:#0b1020;border:1px solid #1b2540;border-radius:22px;overflow:hidden;transition:transform .18s,box-shadow .18s;}
+  .jc-nat:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,16,32,.4);}
+  .jc-nat-ph{position:relative;aspect-ratio:1/1;background:#111;}
+  .jc-nat-ph img{width:100%;height:100%;object-fit:cover;}
+  .jc-nat-badge{position:absolute;top:12px;left:12px;font-family:'Montserrat';font-size:11px;font-weight:800;letter-spacing:0.1em;color:#fff;background:rgba(36,80,245,0.9);padding:5px 10px;border-radius:100px;}
+  .jc-nat-body{padding:18px 18px 22px;}
+  .jc-nat-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.4px;}
+  .jc-nat-role{margin-top:5px;font-size:13.5px;color:#9fb0d0;line-height:1.5;word-break:keep-all;}
+
+  @media(max-width:1024px){
+    .jc-nav{display:none!important;}
+    .jc-grid-3,.jc-grid-2{grid-template-columns:1fr!important;}
+    .jc-grid-5{grid-template-columns:repeat(2,1fr)!important;}
+    .jc-hero-h1{font-size:38px!important;}
+    .jc-lead{flex-direction:column;align-items:flex-start;text-align:left;}
+    .jc-lead-ph{width:130px;height:130px;flex-basis:auto;}
+  }
+</style>
+<style>
+  .jc-doc{max-width:800px;margin:0 auto;padding:72px 32px 96px;}
+  .jc-doc h1{font-size:34px;font-weight:800;letter-spacing:-0.8px;margin-bottom:10px;}
+  .jc-doc .jc-doc-date{font-size:14px;color:#5d6c7b;margin-bottom:48px;}
+  .jc-doc h2{font-size:19px;font-weight:700;margin:44px 0 12px;letter-spacing:-0.4px;}
+  .jc-doc p, .jc-doc li{font-size:15.5px;line-height:1.85;color:#33404d;}
+  .jc-doc p{margin:0 0 12px;}
+  .jc-doc ol, .jc-doc ul{margin:0 0 12px;padding-left:22px;}
+  .jc-doc ol li, .jc-doc ul li{list-style:revert;margin-bottom:6px;}
+  .jc-doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0 16px;}
+  .jc-doc th, .jc-doc td{border:1px solid #e3e6ec;padding:10px 14px;text-align:left;line-height:1.6;color:#33404d;}
+  .jc-doc th{background:#f7f8fa;font-weight:700;color:#1c1e21;white-space:nowrap;}
+</style>
+</head>
+<body id="top">
+<header class="jc-sec" style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;height:82px;padding:0 44px;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #eef1f5;">
+  <a href="./" style="display:inline-flex;align-items:center;"><img src="assets/logo-horizon-a.png" alt="팀제이커브" style="width:150px;"></a>
+  <nav class="jc-nav">
+    <a href="leadership.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 리더십 교육</a>
+    <a href="job-skill.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 직무역량 교육</a>
+    <a href="org-dev.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">AI 조직 개발</a>
+    <a href="cases.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">고객사례</a>
+    <a href="team.html" style="padding:9px 16px;border-radius:100px;color:#1c1e21;font-size:17px;font-weight:600;">팀 소개</a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <a href="#contact" style="display:inline-flex;align-items:center;min-height:44px;padding:11px 24px;border-radius:100px;color:#fff;font-size:16px;font-weight:700;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);box-shadow:0 8px 20px rgba(36,80,245,0.35),inset 0 1px 0 rgba(255,255,255,0.38);">문의하기</a>
+  </div>
+</header>
+<main>
+<section class="jc-sec"><div class="jc-doc">
+<h1>이용약관</h1>
+<p class="jc-doc-date">시행일 : 2026년 7월 23일</p>
+
+<h2>제1조 (목적)</h2>
+<p>본 약관은 주식회사 팀제이커브(이하 "회사")가 운영하는 웹사이트(이하 "사이트")에서 제공하는 서비스의 이용조건 및 절차, 회사와 이용자의 권리·의무와 책임사항을 규정함을 목적으로 합니다.</p>
+
+<h2>제2조 (용어의 정의)</h2>
+<ol>
+<li>"사이트"란 회사가 교육 프로그램 소개, 고객사례, 문의 접수 등을 제공하기 위해 운영하는 웹사이트를 말합니다.</li>
+<li>"이용자"란 사이트에 접속하여 본 약관에 따라 사이트가 제공하는 서비스를 이용하는 자를 말합니다.</li>
+<li>"콘텐츠"란 사이트에 게재된 텍스트, 이미지, 영상, 자료 등 일체의 정보를 말합니다.</li>
+</ol>
+
+<h2>제3조 (약관의 효력 및 변경)</h2>
+<ol>
+<li>본 약관은 사이트에 게시함으로써 효력이 발생합니다.</li>
+<li>회사는 관계 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있으며, 변경된 약관은 사이트에 게시함으로써 효력이 발생합니다.</li>
+</ol>
+
+<h2>제4조 (서비스의 내용)</h2>
+<ol>
+<li>사이트는 회원가입 없이 누구나 무료로 이용할 수 있으며, 다음의 서비스를 제공합니다.
+<ul><li>AI 교육 프로그램(리더십·직무역량·조직 개발 등) 소개</li><li>교육 진행 사례 및 고객사례 제공</li><li>교육 문의 접수 및 상담 연결</li></ul></li>
+<li>회사는 서비스의 내용을 변경하거나 추가할 수 있습니다.</li>
+</ol>
+
+<h2>제5조 (서비스의 중단)</h2>
+<p>회사는 시스템 점검·교체, 통신 장애, 천재지변 등 부득이한 사유가 있는 경우 서비스 제공을 일시적으로 중단할 수 있습니다.</p>
+
+<h2>제6조 (지식재산권)</h2>
+<ol>
+<li>사이트에 게재된 콘텐츠에 대한 저작권 및 지식재산권은 회사에 귀속됩니다.</li>
+<li>이용자는 회사의 사전 서면 동의 없이 콘텐츠를 복제, 전송, 배포, 출판, 방송 기타 방법으로 이용하거나 제3자에게 이용하게 할 수 없습니다.</li>
+</ol>
+
+<h2>제7조 (이용자의 의무)</h2>
+<p>이용자는 다음 각 호의 행위를 하여서는 안 됩니다.</p>
+<ol>
+<li>문의 접수 시 타인의 정보를 도용하거나 허위 정보를 기재하는 행위</li>
+<li>사이트의 운영을 방해하거나 안정적 운영에 지장을 줄 수 있는 행위</li>
+<li>회사 및 제3자의 지식재산권, 명예, 신용을 침해하는 행위</li>
+<li>기타 관계 법령에 위배되는 행위</li>
+</ol>
+
+<h2>제8조 (개인정보보호)</h2>
+<p>회사는 이용자의 개인정보를 관계 법령 및 <a href="privacy.html" style="color:#0064e0;font-weight:600;">개인정보처리방침</a>에 따라 보호합니다.</p>
+
+<h2>제9조 (면책)</h2>
+<ol>
+<li>회사는 사이트에 게재된 정보의 정확성·완전성을 유지하기 위해 노력하나, 이를 보증하지는 않습니다. 게재된 교육 프로그램의 내용·구성은 협의 과정에서 변경될 수 있습니다.</li>
+<li>회사는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우 책임이 면제됩니다.</li>
+<li>사이트에서 연결되는 외부 사이트의 콘텐츠에 대해서는 회사가 책임을 지지 않습니다.</li>
+</ol>
+
+<h2>제10조 (분쟁 해결)</h2>
+<p>본 약관과 관련하여 회사와 이용자 사이에 분쟁이 발생한 경우 상호 협의하여 해결하는 것을 원칙으로 하며, 협의가 이루어지지 않을 경우 민사소송법상의 관할 법원에 제소할 수 있습니다.</p>
+
+<h2>부칙</h2>
+<p>본 약관은 2026년 7월 23일부터 시행합니다.</p>
+</div></section>
+</main>
+<footer class="jc-sec" style="background:#f7f8fa;border-top:1px solid #e8eaef;padding:56px 32px 40px;text-align:center;color:#5d6570;">
+  <img src="assets/logo-horizon-b.png" alt="팀제이커브" style="width:200px;max-width:70vw;display:inline-block;">
+  <nav style="display:flex;justify-content:center;flex-wrap:wrap;gap:4px 26px;margin:26px 0 30px;"><a href="index.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">Home</a><a href="leadership.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 리더십 교육</a><a href="job-skill.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 직무역량 교육</a><a href="org-dev.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">AI 조직 개발</a><a href="cases.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">고객사례</a><a href="team.html" style="color:#1c1e21;font-size:14.5px;font-weight:600;">팀 소개</a><a href="#contact" style="color:#1c1e21;font-size:14.5px;font-weight:600;">문의하기</a></nav>
+  <hr style="border:0;border-top:1px solid #e5e8ee;margin:0 auto 28px;max-width:880px;">
+  <p style="margin:0 0 10px;font-size:15px;font-weight:700;color:#2a2e35;">주식회사 팀제이커브</p>
+  <p style="margin:0;font-size:13.5px;line-height:1.9;color:#6b7280;">대표 : 장현민<span style="margin:0 9px;color:#c9ced8;">|</span>사업자등록번호 : 467-81-03548<span style="margin:0 9px;color:#c9ced8;">|</span>서울특별시 마포구 양화로 186, 526호-1(동교동)<br>이메일 : <a href="mailto:info@teamjcurve.com" style="color:#6b7280;">info@teamjcurve.com</a><span style="margin:0 9px;color:#c9ced8;">|</span>개인정보책임자 : 장현민</p>
+  <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:#9aa1ac;"><span>© 2026 Team J-curve. All rights reserved.</span><span><a href="terms.html" style="color:#4b5563;font-weight:600;">이용약관</a> · <a href="privacy.html" style="color:#4b5563;font-weight:600;">개인정보처리방침</a></span></div>
+</footer>
+</body>
+</html>

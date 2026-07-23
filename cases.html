@@ -21,8 +21,22 @@
   .jc-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .jc-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
   .jc-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:6px;white-space:nowrap;}
+
+  .jc-burger{display:none;}
   @media(max-width:1024px){
     .jc-nav{display:none!important;}
+    .jc-burger{display:inline-flex!important;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;}
+    .jc-burger span{display:block;width:24px;height:2px;background:#1c1e21;border-radius:2px;transition:transform .25s ease,opacity .2s ease;}
+    .jc-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .jc-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+    .jc-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    header.jc-sec{padding:0 20px!important;}
+    header.jc-sec img{width:124px!important;}
+    .jc-mobmenu{position:fixed;top:82px;left:0;right:0;z-index:49;background:#fff;border-bottom:1px solid #eef1f5;box-shadow:0 14px 26px rgba(16,24,40,.09);display:flex;flex-direction:column;padding:6px 20px 18px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;}
+    .jc-mobmenu.open{opacity:1;visibility:visible;transform:translateY(0);}
+    .jc-mobmenu a{padding:15px 6px;font-size:17px;font-weight:600;color:#1c1e21;border-bottom:1px solid #f1f3f6;text-decoration:none;}
+    .jc-mobmenu a.active{color:#2450f5;}
+    .jc-mobmenu a:last-child{border-bottom:0;margin-top:12px;text-align:center;color:#fff;font-weight:700;border-radius:100px;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);}
     .jc-grid-3,.jc-grid-4{grid-template-columns:1fr!important;}
     .jc-hero-h1{font-size:38px!important;}
   }
@@ -50,8 +64,10 @@
   </nav>
   <div style="display:flex;align-items:center;gap:14px;">
     <a href="contact.html" style="display:inline-flex;align-items:center;min-height:44px;padding:11px 24px;border-radius:100px;color:#fff;font-size:16px;font-weight:700;background:linear-gradient(175deg,#6f9bff 0%,#2450f5 48%,#0f24cf 100%);box-shadow:0 8px 20px rgba(36,80,245,0.35),inset 0 1px 0 rgba(255,255,255,0.38);">문의하기</a>
+    <button class="jc-burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="jcMobMenu"><span></span><span></span><span></span></button>
   </div>
 </header>
+<div class="jc-mobmenu" id="jcMobMenu" aria-hidden="true"><a href="leadership.html">AI 리더십 교육</a><a href="job-skill.html">AI 직무역량 교육</a><a href="org-dev.html">AI 조직 개발</a><a href="cases.html">고객사례</a><a href="team.html">팀 소개</a><a href="contact.html">문의하기</a></div>
 
 <main>
 
@@ -352,5 +368,20 @@
   <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:#9aa1ac;"><span>© 2026 Team J-curve. All rights reserved.</span><span><a href="terms.html" style="color:#4b5563;font-weight:600;">이용약관</a> · <a href="privacy.html" style="color:#4b5563;font-weight:600;">개인정보처리방침</a></span></div>
 </footer>
 
+
+<script>
+function jcToggleMenu(btn){var m=document.getElementById('jcMobMenu');if(!m)return;var open=m.classList.toggle('open');if(btn)btn.setAttribute('aria-expanded',open);m.setAttribute('aria-hidden',!open);}
+(function(){
+  document.addEventListener('click',function(e){
+    var burger=e.target.closest&&e.target.closest('.jc-burger');
+    if(burger){jcToggleMenu(burger);return;}
+    var link=e.target.closest&&e.target.closest('#jcMobMenu a');
+    if(link){var m=document.getElementById('jcMobMenu');if(m)m.classList.remove('open');var b=document.querySelector('.jc-burger');if(b)b.setAttribute('aria-expanded','false');}
+  });
+  window.addEventListener('resize',function(){if(innerWidth>1024){var m=document.getElementById('jcMobMenu');if(m)m.classList.remove('open');var b=document.querySelector('.jc-burger');if(b)b.setAttribute('aria-expanded','false');}});
+  function markActive(){var path=(location.pathname.split('/').pop()||'index.html');document.querySelectorAll('#jcMobMenu a').forEach(function(a){var h=a.getAttribute('href').split('/').pop();a.classList.toggle('active',h===path);});}
+  markActive();setTimeout(markActive,600);
+})();
+</script>
 </body>
 </html>

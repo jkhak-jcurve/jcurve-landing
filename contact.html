@@ -384,6 +384,27 @@
     submitNote.style.display = '';
     submitNote.textContent = '메일 앱이 열리면 내용 확인 후 전송 버튼을 눌러주세요. 메일 앱이 열리지 않으면 info@teamjcurve.com 으로 보내주세요.';
   });
+
+  // ?pkg= — 홈 패키지 카드에서 진입 시 의뢰 업무 사전 선택
+  var PKG_MAP = {
+    intro: { etc: '전사 체험형 AI 특강' },
+    leadership: { cat: 'AI 리더십 교육' },
+    jobskill: { cat: 'AI 직무역량 교육' },
+    orgdev: { cat: 'AI 조직 개발' }
+  };
+  var pkg = new URLSearchParams(location.search).get('pkg');
+  var pre = pkg && PKG_MAP[pkg];
+  if (pre) {
+    if (pre.cat) {
+      var box = form.querySelector('input[name=ctCat][value="' + pre.cat + '"]');
+      if (box) box.checked = true;
+    } else if (pre.etc) {
+      document.getElementById('ctCatEtc').checked = true;
+      document.getElementById('ctEtcInput').value = pre.etc;
+    }
+    document.getElementById('ctEtcInput').classList.toggle('ct-show', document.getElementById('ctCatEtc').checked);
+    refresh();
+  }
 })();
 </script>
 

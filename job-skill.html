@@ -21,6 +21,8 @@
   .jc-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
   .jc-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
   .jc-cc-track{display:flex;gap:24px;transition:transform 0.55s cubic-bezier(0.22,1,0.36,1);}
+      .jc-cc-track>a{transition:transform 0.18s ease,box-shadow 0.18s ease;}
+      .jc-cc-track>a:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,19,23,0.1);}
   .jc-cc-wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:stretch;}
   .jc-cc-navbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid #e6ebef;background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color 0.15s,background 0.15s;}
   .jc-cc-navbtn:hover{border-color:#2450f5;background:#eef3ff;}
@@ -54,7 +56,7 @@
     .jc-cc-nav{display:none!important;}
     #jc-cc-viewport{overflow-x:auto!important;scroll-snap-type:x mandatory;}
     .jc-cc-track{transform:none!important;}
-    .jc-cc-track>div{width:80vw!important;}
+    .jc-cc-track>*{width:80vw!important;}
     .jc-hero-h1{font-size:38px!important;}
     .jc-hero-grid{grid-template-columns:1fr!important;}
     .jc-hero-motif{display:none!important;}
@@ -317,13 +319,14 @@
         .jc-cc-nav{display:none!important;}
         #jc-cc-viewport{overflow-x:auto!important;scroll-snap-type:x mandatory;}
         .jc-cc-track{transform:none!important;}
-        .jc-cc-track>div{width:80vw!important;}
+        .jc-cc-track>*{width:80vw!important;}
       }
     </style>
     <div style="max-width:1232px;margin:0 auto;">
       <div class="jc-cc-wrap">
         <div style="display:flex;flex-direction:column;">
           <h2 style="margin:0;font-size:38px;font-weight:600;line-height:1.3;letter-spacing:-0.8px;color:#0a1317;word-break:keep-all;">조직에 최적화된<br>실습 교육 사례를<br>만나보세요</h2>
+          <a href="cases.html" style="display:inline-flex;align-items:center;gap:8px;align-self:flex-start;min-height:50px;margin-top:24px;padding:13px 28px;border-radius:100px;border:2px solid #0a1317;color:#0a1317;font-size:17px;font-weight:700;white-space:nowrap;">사례 전체보기 →</a>
           <div class="jc-cc-nav" style="display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:40px;">
             <button type="button" id="jc-cc-prev" class="jc-cc-navbtn" aria-label="이전 사례" disabled="">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
@@ -336,69 +339,60 @@
         </div>
         <div id="jc-cc-viewport" style="overflow:hidden;min-width:0;">
           <div id="jc-cc-track" class="jc-cc-track">
-          <div style="flex:none;width:calc(46% - 13px);background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
-            <div style="position:relative;width:100%;aspect-ratio:4/3;">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNhNWZlMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE1MzBhOCIvPgo8L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9InVybCgjZykiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzIwLDIzMikiIG9wYWNpdHk9IjAuMzIiPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTIsLTEyKSBzY2FsZSgxLjApIj4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSIyIiB5PSIzIiB3aWR0aD0iOCIgaGVpZ2h0PSIxMCIgcng9IjEuMiIvPjxyZWN0IHg9IjE0IiB5PSIzIiB3aWR0aD0iOCIgaGVpZ2h0PSIxMCIgcng9IjEuMiIvPjxsaW5lIHgxPSI0LjUiIHkxPSI2IiB4Mj0iNy41IiB5Mj0iNiIvPjxsaW5lIHgxPSI0LjUiIHkxPSI4LjUiIHgyPSI3LjUiIHkyPSI4LjUiLz48bGluZSB4MT0iMTYuNSIgeTE9IjYiIHgyPSIxOS41IiB5Mj0iNiIvPjxsaW5lIHgxPSIxNi41IiB5MT0iOC41IiB4Mj0iMTkuNSIgeTI9IjguNSIvPjxwYXRoIGQ9Ik0xMC41IDhoMyIvPjxwYXRoIGQ9Ik0xMi41IDYuNWwxLjUgMS41LTEuNSAxLjUiLz48cGF0aCBkPSJNOSAxOGwyLjIgMi4yTDE1LjUgMTYiLz48L2c+CjwvZz48L2c+Cjwvc3ZnPg==" alt="구매 담당자<br>AI 실무 교육" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy">
-              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,10,20,0.72) 0%,rgba(6,10,20,0.15) 45%,transparent 68%);"></div>
-              <div style="position:absolute;top:16px;left:16px;display:flex;gap:6px;flex-wrap:wrap;">
-                <span style="font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,0.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.35);border-radius:100px;padding:5px 12px;">제조 · 구매 직군</span>
-                <span style="font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.25);border-radius:100px;padding:4px 12px;">AI 직무역량 교육</span>
-              </div>
-              <div style="position:absolute;left:20px;right:20px;bottom:18px;font-size:21px;font-weight:700;letter-spacing:-0.4px;line-height:1.32;color:#fff;word-break:keep-all;">구매 담당자<br>AI 실무 교육</div>
+          <a href="cases/woori-bank-ai-ad-workshop.html" style="flex:none;width:calc(46% - 13px);color:inherit;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
+            <div style="position:relative;width:100%;aspect-ratio:16/10;background:#f4f6f9;">
+              <img src="assets/cases/case-169175160.jpg" alt="AI 트렌드와 재밌는 실습을 한 번에! 우리은행 신입사원 대상 AI 광고 워크숍 후기" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             </div>
-            <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;">
-            <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2450f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">협력사 견적서 비교·총단가 산출 실습</span>
+            <div style="padding:18px 20px 22px;display:grid;gap:7px;">
+              <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.04em;color:#8595a4;">2025-12-23</div>
+              <div style="font-size:17px;font-weight:700;line-height:1.45;letter-spacing:-0.3px;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">AI 트렌드와 재밌는 실습을 한 번에! 우리은행 신입사원 대상 AI 광고 워크숍 후기</div>
             </div>
-            <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2450f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">매일 아침 원자재 시세·시황 리포트 자동 발송 실습</span>
+          </a>
+          <a href="cases/cj-onstyle-md-ai-case.html" style="flex:none;width:calc(46% - 13px);color:inherit;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
+            <div style="position:relative;width:100%;aspect-ratio:16/10;background:#f4f6f9;">
+              <img src="assets/cases/case-167552658.jpg" alt="AI 시대, MD 직무는 어떻게 달라질까? CJ 온스타일 사례로 본 변화" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             </div>
+            <div style="padding:18px 20px 22px;display:grid;gap:7px;">
+              <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.04em;color:#8595a4;">2025-09-03</div>
+              <div style="font-size:17px;font-weight:700;line-height:1.45;letter-spacing:-0.3px;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">AI 시대, MD 직무는 어떻게 달라질까? CJ 온스타일 사례로 본 변화</div>
             </div>
-          </div>
-          <div style="flex:none;width:calc(46% - 13px);background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
-            <div style="position:relative;width:100%;aspect-ratio:4/3;">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIyMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjQ1MGY1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGExZjhmIi8+CjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0idXJsKCNnKSIvPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMjAsMjMyKSIgb3BhY2l0eT0iMC4zMiI+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMiwtMTIpIHNjYWxlKDEuMCkiPgo8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS4zIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0zIDIwVjkuNSIvPjxwYXRoIGQ9Ik04IDIwVjUiLz48cGF0aCBkPSJNMTMgMjB2LTgiLz48cGF0aCBkPSJNMTggMjBWMyIvPjxwYXRoIGQ9Ik0yIDIwaDIwIi8+PC9nPgo8L2c+PC9nPgo8L3N2Zz4=" alt="금융권 실무<br>AI 과정" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy">
-              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,10,20,0.72) 0%,rgba(6,10,20,0.15) 45%,transparent 68%);"></div>
-              <div style="position:absolute;top:16px;left:16px;display:flex;gap:6px;flex-wrap:wrap;">
-                <span style="font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,0.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.35);border-radius:100px;padding:5px 12px;">금융 직군</span>
-                <span style="font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.25);border-radius:100px;padding:4px 12px;">AI 직무역량 교육</span>
-              </div>
-              <div style="position:absolute;left:20px;right:20px;bottom:18px;font-size:21px;font-weight:700;letter-spacing:-0.4px;line-height:1.32;color:#fff;word-break:keep-all;">금융권 실무<br>AI 과정</div>
+          </a>
+          <a href="cases/ybm-designer-ai-workshop.html" style="flex:none;width:calc(46% - 13px);color:inherit;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
+            <div style="position:relative;width:100%;aspect-ratio:16/10;background:#f4f6f9;">
+              <img src="assets/cases/case-166821490.jpg" alt="디자이너가 챗GPT|미드저니를 배우면 생기는 일, YBM AI 워크숍 리뷰" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             </div>
-            <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;">
-            <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2450f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">시장 리포트 요약 → 임원 보고 1페이지 작성 실습</span>
+            <div style="padding:18px 20px 22px;display:grid;gap:7px;">
+              <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.04em;color:#8595a4;">2025-07-16</div>
+              <div style="font-size:17px;font-weight:700;line-height:1.45;letter-spacing:-0.3px;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">디자이너가 챗GPT|미드저니를 배우면 생기는 일, YBM AI 워크숍 리뷰</div>
             </div>
-            <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2450f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">고객 상담 요약·맞춤 제안 초안 실습</span>
+          </a>
+          <a href="cases/shinsegae-enc-ai-training.html" style="flex:none;width:calc(46% - 13px);color:inherit;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
+            <div style="position:relative;width:100%;aspect-ratio:16/10;background:#f4f6f9;">
+              <img src="assets/cases/case-164468111.jpg" alt="AI 활용법부터 맞춤실습까지, 신세계건설 전직급 AI역량교육 워크샵 후기" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             </div>
+            <div style="padding:18px 20px 22px;display:grid;gap:7px;">
+              <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.04em;color:#8595a4;">2025-05-27</div>
+              <div style="font-size:17px;font-weight:700;line-height:1.45;letter-spacing:-0.3px;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">AI 활용법부터 맞춤실습까지, 신세계건설 전직급 AI역량교육 워크샵 후기</div>
             </div>
-          </div>
-          <div style="flex:none;width:calc(46% - 13px);background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
-            <div style="position:relative;width:100%;aspect-ratio:4/3;">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM1ZjdmZmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYzJlY2IiLz4KPC9saW5lYXJHcmFkaWVudD48L2RlZnM+CjxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iNDgwIiBmaWxsPSJ1cmwoI2cpIi8+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMyMCwyMzIpIiBvcGFjaXR5PSIwLjMyIj4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyLC0xMikgc2NhbGUoMS4wKSI+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iOSIgY3k9IjciIHI9IjMiLz48cGF0aCBkPSJNMyAyMGMwLTMuMyAyLjctNiA2LTZzNiAyLjcgNiA2Ii8+PGNpcmNsZSBjeD0iMTcuNSIgY3k9IjguNSIgcj0iMi4yIi8+PHBhdGggZD0iTTE1IDIwYzAtMi42IDEuMi00LjYgMi42LTUuNCIvPjwvZz4KPC9nPjwvZz4KPC9zdmc+" alt="그룹 임원<br>AI 역량 향상 과정" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" loading="lazy">
-              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,10,20,0.72) 0%,rgba(6,10,20,0.15) 45%,transparent 68%);"></div>
-              <div style="position:absolute;top:16px;left:16px;display:flex;gap:6px;flex-wrap:wrap;">
-                <span style="font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,0.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.35);border-radius:100px;padding:5px 12px;">식품 그룹 · 임원</span>
-                <span style="font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.25);border-radius:100px;padding:4px 12px;">AI 역량 향상 과정</span>
-              </div>
-              <div style="position:absolute;left:20px;right:20px;bottom:18px;font-size:21px;font-weight:700;letter-spacing:-0.4px;line-height:1.32;color:#fff;word-break:keep-all;">그룹 임원<br>AI 역량 향상 과정</div>
+          </a>
+          <a href="cases/odk-media-ai-shortform-workshop.html" style="flex:none;width:calc(46% - 13px);color:inherit;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
+            <div style="position:relative;width:100%;aspect-ratio:16/10;background:#f4f6f9;">
+              <img src="assets/cases/case-166206485.jpg" alt="ODK Media 한국지사와 함께한 AI 숏폼 캠페인 제작 워크숍!" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             </div>
-            <div style="display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;">
-            <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2450f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">시장·경쟁사 데이터 주간 리포트 에이전트 설계 실습</span>
+            <div style="padding:18px 20px 22px;display:grid;gap:7px;">
+              <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.04em;color:#8595a4;">2025-06-26</div>
+              <div style="font-size:17px;font-weight:700;line-height:1.45;letter-spacing:-0.3px;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">ODK Media 한국지사와 함께한 AI 숏폼 캠페인 제작 워크숍!</div>
             </div>
-            <div style="display:flex;gap:11px;align-items:flex-start;background:#f4f6f9;border-radius:12px;padding:12px 15px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2450f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px;"><path d="M20 6L9 17l-5-5"></path></svg>
-              <span style="font-size:13.5px;font-weight:600;line-height:1.5;color:#0a1317;word-break:keep-all;">시황 브리핑·공급망 리스크 알림 에이전트 설계 실습</span>
+          </a>
+          <a href="cases/hira-generative-ai-training.html" style="flex:none;width:calc(46% - 13px);color:inherit;background:#fff;border:1px solid #e6ebef;border-radius:22px;overflow:hidden;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;">
+            <div style="position:relative;width:100%;aspect-ratio:16/10;background:#f4f6f9;">
+              <img src="assets/cases/case-162354340.jpg" alt="건강보험심사평가원과 함께한 ‘생성형 AI 활용 교육’ 현장을 다녀왔습니다!" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             </div>
+            <div style="padding:18px 20px 22px;display:grid;gap:7px;">
+              <div style="font-family:'Montserrat','Pretendard',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.04em;color:#8595a4;">2025-04-23</div>
+              <div style="font-size:17px;font-weight:700;line-height:1.45;letter-spacing:-0.3px;word-break:keep-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">건강보험심사평가원과 함께한 ‘생성형 AI 활용 교육’ 현장을 다녀왔습니다!</div>
             </div>
-          </div>
+          </a>
           </div>
         </div>
       </div>
